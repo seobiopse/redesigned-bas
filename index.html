@@ -61,6 +61,11 @@
               700: '#b91c20',
               800: '#991b1b',
               900: '#7f1d1d',
+              red: '#dc2626',
+              redHover: '#b91c1c',
+              navy: '#0f172a',
+              dark: '#1e293b',
+              grayBg: '#f8fafc',
             },
             slate: {
               850: '#152033',
@@ -69,6 +74,15 @@
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          boxShadow: {
+            'card-lift': '0 16px 32px -10px rgba(15, 23, 42, 0.12), 0 2px 6px -1px rgba(15, 23, 42, 0.06)',
+            'product-card': '0 4px 20px -2px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04)',
+            'badge-metal': '0 8px 20px -4px rgba(15, 23, 42, 0.28), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9)',
+            'badge-gold': '0 8px 20px -4px rgba(180, 83, 9, 0.3), inset 0 1px 2px 0 rgba(254, 240, 138, 0.9)',
+            'badge-id': '0 8px 18px -4px rgba(15, 23, 42, 0.15), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95)',
+            'badge-pin': '0 6px 16px -2px rgba(180, 83, 9, 0.35)',
+            'plaque-brass': '0 10px 24px -4px rgba(120, 53, 15, 0.3), inset 0 1px 2px 0 rgba(254, 240, 138, 0.7)'
           }
         }
       }
@@ -77,7 +91,7 @@
 <!-- Google Fonts: Inter -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <style data-purpose="custom-enhancements">
     /* Subtle metallic badge previews */
     .badge-preview-silver {
@@ -113,6 +127,61 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.05) 100%);
       border-radius: inherit;
       pointer-events: none;
+    }
+
+    /* Brushed Titanium & Steel Finish */
+    .finish-titanium {
+      background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 32%, #e2e8f0 55%, #94a3b8 80%, #cbd5e1 100%);
+      position: relative;
+    }
+    .finish-titanium::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.15) 0px,
+        rgba(255, 255, 255, 0.15) 1px,
+        rgba(0, 0, 0, 0.03) 1px,
+        rgba(0, 0, 0, 0.03) 2px
+      );
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    /* Polished Marine Brass Plaque Finish */
+    .finish-brass-plaque {
+      background: linear-gradient(135deg, #fef08a 0%, #eab308 25%, #ca8a04 50%, #d97706 75%, #fef9c3 100%);
+      position: relative;
+    }
+    .finish-brass-plaque::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 40%, transparent 60%, rgba(255,255,255,0.3) 100%);
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    /* Hard Enamel Pin Finish */
+    .finish-enamel-pin {
+      background: radial-gradient(circle at 35% 30%, #fef08a, #d97706 70%, #92400e 100%);
+      position: relative;
+    }
+
+    /* Dot matrix background */
+    .hero-pattern {
+      background-image: radial-gradient(#cbd5e1 0.85px, transparent 0.85px);
+      background-size: 20px 20px;
+    }
+
+    /* Pulse animation */
+    @keyframes pulseSoft {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.15); }
+    }
+    .pulse-dot {
+      animation: pulseSoft 2.5s ease-in-out infinite;
     }
   </style>
 </head>
@@ -185,146 +254,272 @@
 </header>
 <!-- END: MainHeader -->
 <main>
-<!-- BEGIN: HeroSection -->
-<section class="relative bg-gradient-to-b from-slate-100 via-white to-slate-50 pt-10 pb-16 border-b border-slate-200 overflow-hidden" data-purpose="hero">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-<!-- Hero Left Copy -->
-<div class="lg:col-span-6 space-y-6">
-<!-- Rating & Trust Pill -->
-<div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-full text-xs font-semibold text-amber-900 shadow-sm">
-<div class="flex text-amber-500">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+<!-- BEGIN: Option B - Integrated Above-The-Fold Category Grid Hero -->
+<section class="relative overflow-hidden pt-6 sm:pt-8 pb-8 hero-pattern border-b border-slate-200" data-purpose="integrated-category-hero">
+<!-- Ambient Lighting Blobs -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-[720px] h-[240px] bg-gradient-to-b from-red-100/50 via-amber-50/30 to-transparent rounded-full filter blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- CENTERED COMPACT EDITORIAL HEADER -->
+<div class="text-center max-w-4xl mx-auto space-y-2.5">
+<!-- Rating & Credential Pill -->
+<div class="inline-flex items-center gap-2 bg-white/95 backdrop-blur border border-slate-200 px-3.5 py-1 rounded-full shadow-xs">
+<span class="text-amber-500 text-xs tracking-wider">★★★★★</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[11px] sm:text-xs font-bold text-slate-800">Trusted by 14,000+ Australian Businesses, Hospitals &amp; Schools</span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+<span class="text-[10px] sm:text-[11px] font-bold text-emerald-700">Dispatching Daily</span>
 </div>
-<span class="border-l border-amber-300 pl-2">Top Engraver in Australia (4.9/5)</span>
-</div>
-<div class="space-y-3">
-<span class="block text-xs font-extrabold uppercase tracking-wider text-brand-600">
-                Australia's Trusted Supplier of Custom Name Badges
-              </span>
-<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Elevate your brand with premium personalised name badges.
-              </h1>
-<p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-                Whether you need elegant laser-engraved metal, crystal-clear acrylic doming, or natural sustainable hardwoods, we deliver perfection with no minimum orders.
-              </p>
-</div>
-<!-- Primary Actions -->
-<div class="flex flex-col sm:flex-row gap-3.5 pt-2">
-<a class="inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-base shadow-md hover:shadow-lg transition" href="#interactive-designer">
-<span>Launch Interactive Designer</span>
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<!-- Main Dramatic Editorial Heading (Broadened Brand Proposition) -->
+<h1 class="text-2xl sm:text-4xl lg:text-[42px] font-black text-slate-900 tracking-tight leading-tight pt-0.5">
+            Australia’s Premier Destination for <br class="hidden sm:inline"/>
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-950 via-brand-red to-slate-800">Custom Badges, ID Cards &amp; Recognition Plaques.</span>
+</h1>
+<!-- Concise Subcopy -->
+<p class="text-xs sm:text-sm lg:text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+            Precision manufacturing for every badge and sign: 24h dispatch, zero minimum orders, and free digital proofs by local Aussie craftsmen.
+          </p>
+<!-- Quick Action Bar -->
+<div class="pt-1 flex flex-wrap items-center justify-center gap-2.5 text-xs sm:text-sm">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-red hover:bg-brand-redHover text-white font-bold shadow-md shadow-red-600/15 transition-all hover:translate-y-[-1px] active:translate-y-[0px]" href="#catalog-grid">
+<span>Browse Catalog</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
 </a>
-<a class="inline-flex justify-center items-center px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-semibold text-base border border-slate-300 shadow-sm transition" href="#collections">
-                Browse Badge Catalog
-              </a>
-</div>
-<!-- Inline Trust Pillars -->
-<div class="pt-4 border-t border-slate-200/80 grid grid-cols-3 gap-3 text-xs font-semibold text-slate-600">
-<div class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-<span>Australian Made</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-<span>No Min Orders</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-<span>Express Shipping</span>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-semibold shadow-xs hover:bg-slate-50 transition-all" href="#">
+<svg class="w-3.5 h-3.5 text-brand-red" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Request Swatch &amp; Sample Box</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium transition-colors" href="#">
+<svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Instant Quote / Upload Artwork</span>
+</a>
 </div>
 </div>
+<!-- INTEGRATED CATEGORY SHOWCASE STRIP (4 Distinct Visual Product Tiles directly in hero above the fold) -->
+<div class="mt-6 pt-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5" id="catalog-grid">
+<!-- TILE 1: Name Badges & Desk Plates -->
+<div class="group bg-white rounded-2xl p-4 border border-slate-200 hover:border-brand-red/50 shadow-product-card hover:shadow-card-lift transition-all duration-300 flex flex-col justify-between">
+<div>
+<!-- Visual Specimen Render -->
+<div class="relative h-28 w-full bg-slate-100/90 rounded-xl flex items-center justify-center p-3 border border-slate-100 overflow-hidden group-hover:bg-red-50/30 transition-colors">
+<!-- Mini Floating Badge Specimen -->
+<div class="finish-titanium rounded-lg px-3.5 py-2 shadow-badge-metal border border-white/80 w-full max-w-[210px] transform group-hover:scale-105 transition-transform duration-300">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+<span class="text-[8px] font-black tracking-wider text-slate-900">AERO DENTAL</span>
 </div>
-<!-- Hero Right: Live Interactive Badge Previewer Hook -->
-<div class="lg:col-span-6" id="interactive-designer">
-<div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-7 relative" data-purpose="quick-badge-customizer">
-<!-- Badge Live Render Area -->
-<div class="mb-6 p-6 sm:p-8 bg-slate-100 rounded-xl flex flex-col items-center justify-center border border-dashed border-slate-300">
-<div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-3">Live Badge Preview</div>
-<!-- Custom Badge Graphic Container -->
-<div class="badge-preview-silver domed-sheen w-72 sm:w-80 h-32 rounded-lg shadow-lg flex flex-col justify-center px-5 py-3 text-slate-900 border-2 border-slate-400 relative transition-all duration-300" id="badge-display-card">
-<div class="flex items-center justify-between border-b pb-1.5 mb-1.5 border-slate-400/40">
-<span class="text-[10px] font-black uppercase tracking-widest text-brand-700 flex items-center gap-1">
-<span class="w-2 h-2 bg-brand-600 rounded-full inline-block"></span>
-                      BadgeStore
-                    </span>
-<span class="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 bg-slate-900/10 rounded">Magnetic Attached</span>
+<span class="text-[7px] font-bold uppercase px-1 rounded bg-slate-900/10 text-slate-800">MAGNET</span>
 </div>
-<div class="font-extrabold text-xl leading-tight tracking-tight uppercase" id="badge-name-render">
-                    Leslie Alexander
+<div class="mt-1">
+<div class="text-[11px] font-black text-slate-950 uppercase leading-tight tracking-tight">Dr. Jessica Taylor</div>
+<div class="text-[8px] font-semibold text-slate-600">Lead Surgeon</div>
+</div>
+</div>
+<!-- Clasp Callout -->
+<span class="absolute bottom-1.5 right-2 text-[9px] font-bold text-slate-500 bg-white/90 px-1.5 py-0.5 rounded shadow-xs">
+                  Neodymium Clasp
+                </span>
+</div>
+<!-- Product Tile Info -->
+<div class="mt-3">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-red">Best Seller</span>
+<span class="text-xs font-bold text-slate-900">From <strong class="text-sm font-black">$4.95</strong></span>
+</div>
+<h3 class="text-base font-black text-slate-900 mt-0.5 group-hover:text-brand-red transition-colors">
+                  Name Badges &amp; Desk Plates
+                </h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">
+                  Brushed titanium steel, 24k gold, eco timber &amp; crystal polyurethane dome options with zero pinholes.
+                </p>
+</div>
+</div>
+<!-- Footer Action Link -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-red group-hover:text-brand-redHover">
+<span>Configure Badges</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- TILE 2: Staff ID Cards & Lanyards -->
+<div class="group bg-white rounded-2xl p-4 border border-slate-200 hover:border-brand-red/50 shadow-product-card hover:shadow-card-lift transition-all duration-300 flex flex-col justify-between">
+<div>
+<!-- Visual Specimen Render -->
+<div class="relative h-28 w-full bg-slate-100/90 rounded-xl flex items-center justify-center p-2 border border-slate-100 overflow-hidden group-hover:bg-blue-50/30 transition-colors">
+<!-- Realistic Mini ID Card Specimen -->
+<div class="bg-white rounded-lg shadow-badge-id border border-slate-300/80 px-2.5 py-2 w-[160px] transform group-hover:scale-105 transition-transform duration-300">
+<div class="flex items-center justify-between border-b border-slate-100 pb-1 mb-1">
+<span class="text-[8px] font-black text-blue-700 uppercase tracking-tight">VIC HEALTHCARE</span>
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+</div>
+<div class="flex gap-2 items-center">
+<div class="w-7 h-8 bg-slate-200 rounded flex items-center justify-center text-slate-400 text-[10px]">
+<svg class="w-4 h-4 text-slate-500" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div>
+<div class="text-[9px] font-bold text-slate-900 leading-tight">Liam O'Connor</div>
+<div class="text-[7px] text-slate-500">Clinical ID: 4892</div>
+<div class="text-[7px] font-mono text-slate-400 mt-0.5">RFID ENCODED</div>
+</div>
+</div>
+</div>
+<!-- Lanyard Loop Indicator -->
+<div class="absolute top-1.5 left-1/2 -translate-x-1/2 w-4 h-2 rounded-t-sm border border-slate-400 bg-slate-200"></div>
+<span class="absolute bottom-1.5 right-2 text-[9px] font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">
+                  Dual-Sided UV
+                </span>
+</div>
+<!-- Product Tile Info -->
+<div class="mt-3">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-blue-600">High Security</span>
+<span class="text-xs font-bold text-slate-900">From <strong class="text-sm font-black">$3.20</strong></span>
+</div>
+<h3 class="text-base font-black text-slate-900 mt-0.5 group-hover:text-brand-red transition-colors">
+                  Staff ID Cards &amp; Lanyards
+                </h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">
+                  Durable PVC cards with chip RFID/NFC, barcode encoding, magnetic stripes, and custom printed woven lanyards.
+                </p>
+</div>
+</div>
+<!-- Footer Action Link -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-red group-hover:text-brand-redHover">
+<span>Order Staff Cards</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- TILE 3: Custom Lapel Pins & Medals -->
+<div class="group bg-white rounded-2xl p-4 border border-slate-200 hover:border-brand-red/50 shadow-product-card hover:shadow-card-lift transition-all duration-300 flex flex-col justify-between">
+<div>
+<!-- Visual Specimen Render -->
+<div class="relative h-28 w-full bg-slate-100/90 rounded-xl flex items-center justify-center p-2 border border-slate-100 overflow-hidden group-hover:bg-amber-50/30 transition-colors">
+<!-- Hard Enamel Pin Visual Representation -->
+<div class="relative transform group-hover:scale-110 transition-transform duration-300">
+<div class="finish-enamel-pin w-14 h-14 rounded-full shadow-badge-pin p-1 flex items-center justify-center border-2 border-amber-300">
+<div class="w-10 h-10 rounded-full bg-slate-900 flex flex-col items-center justify-center text-amber-300 text-center border border-amber-400">
+<span class="text-[9px] font-black">20 YR</span>
+<span class="text-[6px] tracking-widest uppercase">HONOUR</span>
+</div>
+</div>
+<!-- Butterfly Clutch Micro Pin Shadow -->
+<div class="absolute -right-2 top-0 bg-amber-100 text-amber-900 border border-amber-300 text-[8px] font-bold px-1 rounded shadow-xs">
+                    Die-Struck
                   </div>
-<div class="text-xs font-semibold text-slate-700 tracking-wide mt-0.5" id="badge-title-render">
-                    Operations Manager
-                  </div>
 </div>
-<div class="mt-3 text-[11px] text-slate-500 flex items-center gap-1.5">
-<svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-<span>Garment-safe dual neodymium magnetic backing included</span>
+<span class="absolute bottom-1.5 right-2 text-[9px] font-bold text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded">
+                  Gold Hard Enamel
+                </span>
+</div>
+<!-- Product Tile Info -->
+<div class="mt-3">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-700">Corporate &amp; Club</span>
+<span class="text-xs font-bold text-slate-900">From <strong class="text-sm font-black">$1.85</strong></span>
+</div>
+<h3 class="text-base font-black text-slate-900 mt-0.5 group-hover:text-brand-red transition-colors">
+                  Custom Lapel Pins &amp; Medals
+                </h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">
+                  Die-struck soft &amp; hard enamel, gold electroplating, glitter infills, and school service anniversary medals.
+                </p>
 </div>
 </div>
-<!-- Interactive Customizer Controls -->
-<div class="space-y-4">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Footer Action Link -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-red group-hover:text-brand-redHover">
+<span>View Pin Options</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- TILE 4: Architectural Plaques & Signs -->
+<div class="group bg-white rounded-2xl p-4 border border-slate-200 hover:border-brand-red/50 shadow-product-card hover:shadow-card-lift transition-all duration-300 flex flex-col justify-between">
 <div>
-<label class="block text-xs font-bold uppercase text-slate-700 mb-1" for="input-badge-name">Name on Badge</label>
-<input class="w-full text-sm font-semibold rounded-lg border-slate-300 focus:border-brand-600 focus:ring-brand-600 py-2" id="input-badge-name" type="text" value="Leslie Alexander"/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase text-slate-700 mb-1" for="input-badge-title">Job Title / Department</label>
-<input class="w-full text-sm rounded-lg border-slate-300 focus:border-brand-600 focus:ring-brand-600 py-2" id="input-badge-title" type="text" value="Operations Manager"/>
-</div>
-</div>
-<!-- Material Choices -->
-<div>
-<label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Badge Material</label>
-<div class="grid grid-cols-4 gap-2 text-xs font-semibold text-center" id="material-selector">
-<button class="material-btn py-2 px-1 rounded-lg border-2 border-brand-600 bg-slate-100 text-slate-900 shadow-sm" data-material="silver" type="button">Silver Metal</button>
-<button class="material-btn py-2 px-1 rounded-lg border border-slate-200 bg-amber-50 hover:border-slate-400 text-amber-900" data-material="gold" type="button">Gold Metal</button>
-<button class="material-btn py-2 px-1 rounded-lg border border-slate-200 bg-amber-900/10 hover:border-slate-400 text-amber-950" data-material="mahogany" type="button">Mahogany</button>
-<button class="material-btn py-2 px-1 rounded-lg border border-slate-200 bg-white hover:border-slate-400 text-slate-800" data-material="white" type="button">White Domed</button>
+<!-- Visual Specimen Render -->
+<div class="relative h-28 w-full bg-slate-100/90 rounded-xl flex items-center justify-center p-2 border border-slate-100 overflow-hidden group-hover:bg-amber-50/40 transition-colors">
+<!-- Realistic Architectural Brass Plaque Specimen -->
+<div class="finish-brass-plaque rounded-md p-2 shadow-plaque-brass border-2 border-yellow-300/90 w-[170px] relative transform group-hover:scale-105 transition-transform duration-300">
+<!-- Standoff bolts in 4 corners -->
+<div class="absolute top-1 left-1 w-1.5 h-1.5 rounded-full bg-amber-950 border border-amber-300"></div>
+<div class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-950 border border-amber-300"></div>
+<div class="absolute bottom-1 left-1 w-1.5 h-1.5 rounded-full bg-amber-950 border border-amber-300"></div>
+<div class="absolute bottom-1 right-1 w-1.5 h-1.5 rounded-full bg-amber-950 border border-amber-300"></div>
+<div class="text-center py-0.5">
+<div class="text-[7px] font-bold uppercase tracking-widest text-amber-950">COMMONWEALTH CHAMBERS</div>
+<div class="text-[9px] font-black uppercase tracking-tight text-amber-950 mt-0.5">LEGAL COUNSEL</div>
+<div class="text-[6px] text-amber-900 font-semibold mt-0.5">ESTABLISHED 1984</div>
 </div>
 </div>
-<!-- Fastener Preference -->
-<div>
-<label class="block text-xs font-bold uppercase text-slate-700 mb-1.5">Fastening Attachment</label>
-<div class="grid grid-cols-2 gap-3 text-xs font-medium">
-<label class="flex items-center p-2.5 rounded-lg border border-brand-600 bg-brand-50/40 cursor-pointer">
-<input checked="" class="text-brand-600 focus:ring-brand-500 mr-2" name="fastener" type="radio"/>
-<div>
-<span class="font-bold text-slate-900 block">Magnetic (Premium)</span>
-<span class="text-[11px] text-slate-500">No clothing pinholes</span>
+<span class="absolute bottom-1.5 right-2 text-[9px] font-bold text-amber-900 bg-amber-100/80 px-1.5 py-0.5 rounded">
+                  Marine Brass
+                </span>
 </div>
-</label>
-<label class="flex items-center p-2.5 rounded-lg border border-slate-200 hover:border-slate-300 cursor-pointer">
-<input class="text-brand-600 focus:ring-brand-500 mr-2" name="fastener" type="radio"/>
-<div>
-<span class="font-bold text-slate-900 block">Safety Pin</span>
-<span class="text-[11px] text-slate-500">Traditional fit</span>
+<!-- Product Tile Info -->
+<div class="mt-3">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-700">Architectural</span>
+<span class="text-xs font-bold text-slate-900">From <strong class="text-sm font-black">$45.00</strong></span>
 </div>
-</label>
+<h3 class="text-base font-black text-slate-900 mt-0.5 group-hover:text-brand-red transition-colors">
+                  Architectural Plaques &amp; Signs
+                </h3>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">
+                  Marine-grade brushed brass, cast bronze, acrylic door signage, and premium stainless opening plaques.
+                </p>
 </div>
 </div>
-<div class="flex items-center justify-between pt-2">
-<label class="flex items-center gap-2 text-xs text-slate-600 select-none cursor-pointer">
-<input checked="" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500" id="checkbox-border" type="checkbox"/>
-<span>Include outer border line</span>
-</label>
-<div class="text-right">
-<span class="text-xs text-slate-500">Single Unit:</span>
-<span class="text-lg font-extrabold text-slate-900 ml-1">$15.00</span>
+<!-- Footer Action Link -->
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-red group-hover:text-brand-redHover">
+<span>Explore Plaques</span>
+<svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
 </div>
 </div>
-<button class="w-full py-3 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg text-sm flex items-center justify-center gap-2 shadow transition" type="button">
-<svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-<span>Add Custom Badge to Cart — $15.00</span>
-</button>
 </div>
+<!-- ANCHORED AUSSIE TRUST RIBBON (Keeps entire view strictly compact) -->
+<div class="mt-6 pt-3 pb-1 border-t border-slate-200/80 flex flex-wrap items-center justify-center sm:justify-between gap-3 text-[11px] sm:text-xs font-semibold text-slate-600">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-900 text-white font-black text-[9px]">AU</span>
+<span class="text-slate-900 font-bold">Aussie Promise:</span>
+<span>Made in Sydney &amp; Brisbane</span>
 </div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>24h Express Available</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>100% Recycled &amp; Sustainable Options</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span>N52 Garment Safe Magnets</span>
+</div>
+<div class="hidden lg:flex items-center gap-1 text-brand-red font-bold">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span>View Full 2025 Catalog</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
 </div>
 </div>
 </div>
 </section>
-<!-- END: HeroSection -->
+<!-- END: Option B - Integrated Above-The-Fold Category Grid Hero -->
 <!-- BEGIN: ValuePropositionPillars -->
 <section class="py-14 bg-white border-b border-slate-200" data-purpose="value-propositions">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
