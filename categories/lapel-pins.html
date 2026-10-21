@@ -616,6 +616,19 @@
             <div class="flex items-center gap-3 mb-3">
                 <span class="w-7 h-7 rounded-lg bg-brand-red text-white flex items-center justify-center text-xs font-bold">2</span>
                 <h3 class="text-lg font-bold text-slate-900">Collection Overview (3 Styles)</h3>
+                <div class="relative inline-flex group/devtip">
+                    <button type="button" class="w-4 h-4 rounded-full bg-slate-300 text-white text-[10px] font-bold flex items-center justify-center hover:bg-slate-400 transition-colors" aria-label="Dev info">i</button>
+                    <div class="absolute left-0 top-full mt-2 hidden group-hover/devtip:block z-50 w-72 bg-slate-900 text-slate-100 text-xs rounded-lg shadow-lg p-4">
+                        <div class="font-bold text-white mb-2">For Dev &mdash; Logic Behind This</div>
+                        <ol class="list-decimal list-inside space-y-1 text-slate-300">
+                            <li>Each item below links to its real product page.</li>
+                            <li>Take the product name from that page's &lt;h1&gt;.</li>
+                            <li>Take the price from that page's hero price display.</li>
+                            <li>If either differs from what's shown here, update this list to match.</li>
+                            <li>Update the "(N Styles)" count to the number of items listed.</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
             <ul class="text-xs sm:text-sm text-slate-600 space-y-2 mt-2">
                 
