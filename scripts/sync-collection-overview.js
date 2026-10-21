@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /*
- * Dev tool: syncs each category page's "Collection Overview" list
- * (product name + price shown per style) against the real data on
- * each linked product page, so this list can never drift out of sync
- * with the actual product again.
+ * Dev tool: syncs two places on each category page against the real
+ * data on each linked product page, so neither can drift out of sync
+ * with the actual product again:
+ *   1. The "Collection Overview" list (product name + price per style)
+ *   2. The "Featured Product" card grid (product name + "From $X" price)
  *
  * Usage: node scripts/sync-collection-overview.js [--check]
  *   --check   report mismatches without writing any files (CI-friendly)
@@ -42,6 +43,41 @@ function formatPriceSpan(data) {
   // Flat price, non-numeric price ("Contact us..."), or "From $X" style —
   // just show the product page's own rendered hero price text as-is.
   return `<span>${data.priceText || (data.low ? '$' + data.low : 'N/A')}</span>`;
+}
+
+function formatCardPrice(data) {
+  // The card only has room for a single "From $X" figure, never a range.
+  if (data.low) return `$${data.low}`;
+  return data.priceText || 'N/A';
+}
+
+function processFeaturedCards(file, html, issues) {
+  const cardRe = /<h3 class="font-bold text-slate-900 group-hover:text-brand-red transition-colors text-base leading-snug">\s*<a href="\.\.\/products\/([^"]+)">([^<]*)<\/a>\s*<\/h3>([\s\S]*?)<span class="text-\[11px\] text-slate-400 uppercase font-semibold block">From<\/span>\s*<span class="text-lg font-extrabold text-slate-900">([^<]*)<\/span>/g;
+
+  let match;
+  while ((match = cardRe.exec(html)) !== null) {
+    const [fullBlock, productFile, listedName, middle, listedPrice] = match;
+    const data = getProductData(productFile);
+    if (!data || !data.name) {
+      issues.push(`${file}: card links to ${productFile}, product/H1 not found`);
+      continue;
+    }
+    const realName = data.name;
+    const realPrice = formatCardPrice(data);
+
+    if (listedName.trim() !== realName) {
+      issues.push(`${file}: card "${listedName.trim()}" -> "${realName}" (${productFile})`);
+    }
+    if (listedPrice.trim() !== realPrice.trim()) {
+      issues.push(`${file}: card price for "${realName}" "${listedPrice.trim()}" -> "${realPrice.trim()}"`);
+    }
+
+    let newBlock = fullBlock
+      .replace(`>${listedName}</a>`, `>${realName}</a>`)
+      .replace(`>${listedPrice}</span>`, `>${realPrice}</span>`);
+    html = html.replace(fullBlock, newBlock);
+  }
+  return html;
 }
 
 function processCategoryFile(file) {
@@ -89,6 +125,8 @@ function processCategoryFile(file) {
     issues.push(`${file}: style count ${headingMatch[2]} -> ${styleCount}`);
     html = html.replace(headingRe, `$1${styleCount}$3`);
   }
+
+  html = processFeaturedCards(file, html, issues);
 
   if (html !== original && !CHECK_ONLY) {
     fs.writeFileSync(full, html);
