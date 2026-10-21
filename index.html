@@ -1180,22 +1180,4 @@
   </script>
 <!-- END: InteractiveScripts -->
 
-<!-- BEGIN: DevTokenToggle -->
-<button id="dev-token-toggle" type="button" style="position:fixed;bottom:16px;right:16px;z-index:9999;background:#1E293B;color:#fff;border:none;border-radius:8px;padding:10px 14px;font-size:12px;font-weight:600;font-family:'Inter',system-ui,sans-serif;box-shadow:0 4px 12px rgba(0,0,0,0.25);cursor:pointer;">Show {{tokens}}</button>
-<script data-purpose="dev-token-toggle">
-(function () {
-  var tokenEls = Array.prototype.slice.call(document.querySelectorAll('[data-token]'));
-  var originals = tokenEls.map(function (el) { return el.textContent; });
-  var showingTokens = false;
-  var btn = document.getElementById('dev-token-toggle');
-  btn.addEventListener('click', function () {
-    showingTokens = !showingTokens;
-    tokenEls.forEach(function (el, i) {
-      el.textContent = showingTokens ? '{{' + el.getAttribute('data-token') + '}}' : originals[i];
-    });
-    btn.textContent = showingTokens ? 'Show Values' : 'Show {{tokens}}';
-  });
-})();
-</script>
-<!-- END: DevTokenToggle -->
 </body></html>

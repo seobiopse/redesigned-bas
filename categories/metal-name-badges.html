@@ -284,7 +284,7 @@
 <!-- Category Heading -->
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
-<h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight" data-token="category_name">
+<h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
             Metal Name Badges
           </h1>
 <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-3xl">
@@ -436,7 +436,7 @@
                 <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                     <div>
                         <span class="text-[11px] text-slate-400 uppercase font-semibold block">From</span>
-                        <span class="text-lg font-extrabold text-slate-900"><span data-token="low_price">$8.50</span> - <span data-token="high_price">$14.00</span></span>
+                        <span class="text-lg font-extrabold text-slate-900"><span>$8.50</span> - <span>$14.00</span></span>
                     </div>
                     <a href="../products/rectangle-name-badge-laser-engraved.html" class="bg-slate-900 hover:bg-brand-red text-white text-xs font-semibold px-3.5 py-2 rounded-lg transition-colors">
                         Configure
@@ -667,7 +667,7 @@
                 <h3 class="text-lg font-bold text-slate-900">Materials &amp; Craftsmanship</h3>
             </div>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                At BadgeStore Australia, our <strong>Metal Name Badges</strong> collection starts from <strong data-token="low_price">$14.00</strong>. Available shapes and dimensions include: <strong>75mm x 25mm (Standard corporate size)</strong>.
+                At BadgeStore Australia, our <strong>Metal Name Badges</strong> collection starts from <strong>$14.00</strong>. Available shapes and dimensions include: <strong>75mm x 25mm (Standard corporate size)</strong>.
             </p>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2.5">
                 Substrates feature <strong>2-Ply Laser-Markable Polymer Plate</strong>. High-definition digital prints, laser markable polymers, and optional polyurethane domed lenses ensure durability of at least <strong>3-5 years</strong> under regular commercial wear.
@@ -684,7 +684,7 @@
                 
             <li class="flex items-center justify-between bg-white p-2.5 rounded-lg border border-slate-200">
                 <a href="../products/rectangle-name-badge-laser-engraved.html" class="text-xs font-bold text-slate-800 hover:text-brand-red transition-colors">Rectangle Name Badge Laser Engraved</a>
-                <span class="text-[11px] font-extrabold text-brand-red bg-red-50 px-2 py-0.5 rounded-full"><span data-token="low_price">$8.50</span> - <span data-token="high_price">$14.00</span></span>
+                <span class="text-[11px] font-extrabold text-brand-red bg-red-50 px-2 py-0.5 rounded-full"><span>$8.50</span> - <span>$14.00</span></span>
             </li>
             </ul>
         </div>
@@ -896,23 +896,6 @@
 </footer>
 <!-- END: MainFooter -->
 
-<!-- BEGIN: DevTokenToggle -->
-<button id="dev-token-toggle" type="button" style="position:fixed;bottom:16px;right:16px;z-index:9999;background:#1E293B;color:#fff;border:none;border-radius:8px;padding:10px 14px;font-size:12px;font-weight:600;font-family:'Inter',system-ui,sans-serif;box-shadow:0 4px 12px rgba(0,0,0,0.25);cursor:pointer;">Show {{tokens}}</button>
-<script data-purpose="dev-token-toggle">
-(function () {
-  var tokenEls = Array.prototype.slice.call(document.querySelectorAll('[data-token]'));
-  var originals = tokenEls.map(function (el) { return el.textContent; });
-  var showingTokens = false;
-  var btn = document.getElementById('dev-token-toggle');
-  btn.addEventListener('click', function () {
-    showingTokens = !showingTokens;
-    tokenEls.forEach(function (el, i) {
-      el.textContent = showingTokens ? '{{' + el.getAttribute('data-token') + '}}' : originals[i];
-    });
-    btn.textContent = showingTokens ? 'Show Values' : 'Show {{tokens}}';
-  });
-})();
-</script>
-<!-- END: DevTokenToggle -->
+
 </body>
 </html>
