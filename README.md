@@ -1,15 +1,13 @@
-# BadgeStore Australia - Static Site Redesign
+﻿# BadgeStore Australia - Static Site Redesign
 
 This repository contains the mobile-optimised redesign of the [BadgeStore](https://www.badgestore.com.au/) catalog site. It is a plain multi-page HTML site (HTML, Tailwind via CDN, and a little vanilla JavaScript). There is no build step: every page is edited directly and published as it is.
 
 ## Repository structure
 
 ```
-assets/        Shared static assets (style.css, app.js)
 categories/    Category (collection) pages
 products/      Product detail pages
 references/    Brand and SEO instructions and reference material (not part of the site)
-scripts/       Helper scripts
 index.html     Homepage
 *.html         Other site pages (contact, reviews, sitemap, policies, etc.)
 ```
