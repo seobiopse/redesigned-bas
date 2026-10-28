@@ -198,6 +198,8 @@
       font: 400 12px/1.5 Inter, sans-serif; text-align: left; text-transform: none; letter-spacing: 0;
     }
     .info-tip:hover > .info-pop, .info-tip:focus-within > .info-pop { visibility: visible; opacity: 1; }
+    .tier-tile.active { background: #fef2f2; border-color: #fca5a5; }
+    .tier-tile.active span { color: #991b1b; }
     .info-pop b { color: #fff; }
     .info-pop ul { margin: 6px 0 0; padding-left: 16px; list-style: disc; }
     .info-pop li { margin-bottom: 3px; }
@@ -268,7 +270,7 @@
 </div>
 <!-- Category Navigation Bar -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<nav class="border-t border-slate-100 flex items-center space-x-1 sm:space-x-4 overflow-x-auto sm:overflow-visible py-2.5 text-xs sm:text-sm font-medium whitespace-nowrap scrollbar-none" data-purpose="primary-navigation"><div class="relative group"><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors inline-flex items-center" href="categories/name-badges.html">Name Badges<svg class="w-3 h-3 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50"><div class="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]"><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/engraved-name-badges.html">Engraved Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/acrylic-dome-name-badges.html">Acrylic Dome Name Badges</a><a class="block pl-7 pr-4 py-1.5 text-xs text-slate-500 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/snap-badges.html">Snap Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/full-colour-name-badges.html">Full Colour Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/custom-framed-name-badges.html">Custom Framed Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/reusable-name-badges.html">Reusable Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/hardwood-engraved-badges.html">Hardwood Engraved Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/metal-name-badges.html">Metal Name Badges</a></div></div></div><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/desk-plates.html">Desk Plates</a><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/metal-plaques.html">Metal Plaques</a><div class="relative group"><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors inline-flex items-center" href="categories/id-cards.html">ID Cards<svg class="w-3 h-3 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50"><div class="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]"><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/id-cards.html">All ID Cards</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/lanyards-clips-accessories.html">Lanyards, Clips & Accessories</a></div></div></div><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/lapel-pins.html">Lapel Pins</a><div class="relative group"><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors inline-flex items-center" href="categories/badge-machines.html">Badge Machines<svg class="w-3 h-3 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50"><div class="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]"><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/badge-machines.html">All Badge Machines</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/australian-made-badge-machines.html">Australian Made</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/imported-badge-machines.html">Imported</a></div></div></div><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/pet-tags.html">Pet Tags</a></nav>
+<nav class="border-t border-slate-100 flex items-center space-x-1 sm:space-x-4 overflow-x-auto sm:overflow-visible py-2.5 text-xs sm:text-sm font-medium whitespace-nowrap scrollbar-none" data-purpose="primary-navigation"><div class="relative group"><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors inline-flex items-center" href="categories/name-badges.html">Name Badges<svg class="w-3 h-3 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50"><div class="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]"><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/engraved-name-badges.html">Engraved Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/acrylic-dome-name-badges.html">Acrylic Dome Name Badges</a><a class="block pl-7 pr-4 py-1.5 text-xs text-slate-500 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/snap-badges.html">Snap Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/full-colour-name-badges.html">Full Colour Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/custom-framed-name-badges.html">Custom Framed Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/reusable-name-badges.html">Reusable Name Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/hardwood-engraved-badges.html">Hardwood Engraved Badges</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/metal-name-badges.html">Metal Name Badges</a></div></div></div><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/desk-plates.html">Desk Plates</a><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/metal-plaques.html">Metal Plaques</a><div class="relative group"><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors inline-flex items-center" href="categories/id-cards.html">ID Cards<svg class="w-3 h-3 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50"><div class="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]"><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/id-cards.html">All ID Cards</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/lanyards-clips-accessories.html">Lanyards, Clips & Accessories</a></div></div></div><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/lapel-pins.html">Lapel Pins</a><div class="relative group"><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors inline-flex items-center" href="categories/badge-machines.html">Badge Machines<svg class="w-3 h-3 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50"><div class="bg-white border border-gray-200 rounded-lg shadow-lg py-2 min-w-[240px]"><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/badge-machines.html">All Badge Machines</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/australian-made-badge-machines.html">Australian Made</a><a class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-red transition-colors" href="categories/imported-badge-machines.html">Imported</a></div></div></div><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/button-badges.html">Button Badges</a><a class="text-slate-600 hover:text-brand-red px-3 py-1.5 rounded-md hover:bg-slate-50 transition-colors" href="categories/pet-tags.html">Pet Tags</a></nav>
 </div>
 </header>
 <!-- END: MainHeader -->
@@ -735,6 +737,31 @@
 </a>
 </div>
 </article>
+<!-- 7a. Button Badges -->
+<article class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition group flex flex-col justify-between md:col-span-2 lg:col-span-3" id="button-badges">
+<div class="grid grid-cols-1 md:grid-cols-3">
+<div class="h-52 md:h-auto bg-gradient-to-tr from-red-100 via-rose-50 to-slate-100 relative flex items-center justify-center p-6">
+<div class="flex items-end gap-2">
+<div class="w-12 h-12 rounded-full bg-brand-600 border-4 border-white shadow ring-1 ring-slate-200"></div>
+<div class="w-16 h-16 rounded-full bg-slate-800 border-4 border-white shadow ring-1 ring-slate-200"></div>
+<div class="w-20 h-20 rounded-full bg-brand-600 border-4 border-white shadow ring-1 ring-slate-200"></div>
+</div>
+</div>
+<div class="p-6 md:col-span-2 flex flex-col justify-between">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-600">Promotional Badges &amp; Magnets</span>
+<h3 class="text-xl font-extrabold text-slate-900 mt-1">Custom Button Badges &amp; Fridge Magnets</h3>
+<p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">Full colour button badges from 25mm to 85mm and matching fridge magnets, made in Adelaide with a free proof on every order. Bulk discounts available on eligible products.</p>
+<div class="mt-3 flex flex-wrap gap-2"><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/button-badge-25-mm.html">25mm Button Badges <span class="text-slate-400">from $6.99</span></a><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/button-badge-35-mm.html">35mm Button Badges <span class="text-slate-400">from $7.99</span></a><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/button-badge-57-mm.html">57mm Button Badges <span class="text-slate-400">from $8.99</span></a><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/button-badge-85-mm.html">85mm Button Badges <span class="text-slate-400">from $10.49</span></a><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/fridge-badge-magnet-35-mm.html">35mm Fridge Magnets <span class="text-slate-400">from $7.99</span></a><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/fridge-badge-magnet-57-mm.html">57mm Fridge Magnets <span class="text-slate-400">from $9.49</span></a><a class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-red-50 hover:text-brand-600 text-slate-700 text-xs font-medium transition" href="products/fridge-badge-magnet-85-mm.html">85mm Fridge Magnets <span class="text-slate-400">from $10.99</span></a></div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs font-semibold text-slate-500">From $6.99 • Free proofs • Bulk discounts</span>
+<a class="inline-flex items-center text-xs font-bold text-slate-900 hover:text-brand-600" href="categories/button-badges.html"><span>Shop Button Badges</span>
+<svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+</div>
+</div>
+</div>
+</article>
 <!-- 7. Pet Tags -->
 <article class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition group flex flex-col justify-between md:col-span-2 lg:col-span-3" id="pet-tags">
 <div class="grid grid-cols-1 md:grid-cols-3">
@@ -780,39 +807,52 @@
 <h2 class="text-2xl font-extrabold text-slate-900">Calculate Bulk Corporate Discounts<span class="info-tip"><button type="button" class="info-btn" aria-label="How the bulk discount is calculated">i</button><span class="info-pop" role="tooltip">
 <b>How the discount is calculated</b>
 <ul>
-<li>Discount is <b>tier-based on total quantity</b> of name badges in the order (slider value).</li>
-<li>Tiers: 1–9 = $15.00 · 10–49 = $12.50 · 50–99 = $9.90 · 100+ = $7.50 per unit.</li>
-<li>The tier price applies to <b>all units</b> (not just the units above the threshold).</li>
-<li><b>Estimated Total</b> = quantity × tier unit price.</li>
-<li><b>Total Savings</b> = (quantity × $15.00 base price) − Estimated Total.</li>
-<li>Example: 25 badges → $12.50 each → $312.50; savings = $375.00 − $312.50 = $62.50.</li>
+<li>Choose a product, then set the quantity. The discount is a <b>percentage off that product's list price</b>, based on the quantity ordered.</li>
+<li>Tiers: 1–9 = standard price · 10–24 = 10% off · 25–49 = 20% off · 50+ = custom B2B rates (quote).</li>
+<li>The percentage applies to <b>all units</b> of that product.</li>
+<li><b>Estimated Total</b> = quantity × list price × (1 − discount).</li>
+<li><b>Total Savings</b> = (quantity × list price) − Estimated Total.</li>
+<li>Example: 25 × 35mm Button Badge at $7.99 → 20% off → $159.80; savings $39.95.</li>
 </ul>
-<div class="info-note">Currently one flat price list for all badges: no category- or product-specific discounts. Prices are ex-GST/shipping, indicative only; final quote confirmed on purchase order.</div>
+<div class="info-note">Discounts apply to eligible products only. Quantities are counted per product. Estimates are indicative; the final price is confirmed on your quote or purchase order. Tier values are placeholders pending final sign-off.</div>
 </span></span></h2>
 <p class="text-xs sm:text-sm text-slate-600 mt-1">Ordering for a large team or franchise? We offer tier-based wholesale pricing. Slide the controller to check your savings instantly!</p>
 <!-- Tier Badges -->
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-6">
-<div class="p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200">
+<div class="tier-tile p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200" data-min="1">
 <span class="block text-slate-500 font-medium">1 - 9 Units</span>
-<span class="font-extrabold text-slate-900 text-sm">$15.00 <span class="text-[10px] font-normal">ea</span></span>
+<span class="font-extrabold text-slate-900 text-sm">Standard Price</span>
 </div>
-<div class="p-2.5 rounded-lg border text-center text-xs bg-brand-50 border-brand-300">
-<span class="block text-brand-700 font-medium">10 - 49 Units</span>
-<span class="font-extrabold text-brand-900 text-sm">$12.50 <span class="text-[10px] font-normal">ea</span></span>
+<div class="tier-tile p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200" data-min="10">
+<span class="block text-slate-500 font-medium">10 - 24 Units</span>
+<span class="font-extrabold text-slate-900 text-sm">10% Off</span>
 </div>
-<div class="p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200">
-<span class="block text-slate-500 font-medium">50 - 99 Units</span>
-<span class="font-extrabold text-slate-900 text-sm">$9.90 <span class="text-[10px] font-normal">ea</span></span>
+<div class="tier-tile p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200" data-min="25">
+<span class="block text-slate-500 font-medium">25 - 49 Units</span>
+<span class="font-extrabold text-slate-900 text-sm">20% Off</span>
 </div>
-<div class="p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200">
-<span class="block text-slate-500 font-medium">100+ Units</span>
-<span class="font-extrabold text-slate-900 text-sm">$7.50 <span class="text-[10px] font-normal">ea</span></span>
+<div class="tier-tile p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200" data-min="50">
+<span class="block text-slate-500 font-medium">50+ Units</span>
+<span class="font-extrabold text-slate-900 text-sm">Custom B2B Rates</span>
 </div>
+</div>
+<!-- Product Selector -->
+<div class="mt-6">
+<label class="block text-sm font-bold text-slate-800 mb-1" for="bulk-product">Product:</label>
+<select class="w-full text-sm font-semibold rounded-lg border-slate-300 focus:border-brand-600 focus:ring-brand-600 py-2.5" id="bulk-product">
+<option value="6.99">Button Badge 25mm: $6.99</option>
+<option value="7.99" selected>Button Badge 35mm: $7.99</option>
+<option value="8.99">Button Badge 57mm: $8.99</option>
+<option value="10.49">Button Badge 85mm: $10.49</option>
+<option value="7.99">Fridge Magnet 35mm: $7.99</option>
+<option value="9.49">Fridge Magnet 57mm: $9.49</option>
+<option value="10.99">Fridge Magnet 85mm: $10.99</option>
+</select>
 </div>
 <!-- Interactive Slider -->
-<div class="mt-8 space-y-3">
+<div class="mt-6 space-y-3">
 <div class="flex justify-between items-center text-sm">
-<span class="font-bold text-slate-800">Number of Name Badges Needed:</span>
+<span class="font-bold text-slate-800">Number of Badges Needed:</span>
 <span class="font-black text-brand-600 text-lg" id="badge-qty-val">25</span>
 </div>
 <input class="w-full accent-brand-600 cursor-pointer h-2 bg-slate-200 rounded-lg" id="bulk-slider" max="150" min="1" type="range" value="25"/>
@@ -827,15 +867,15 @@
 <div class="mt-8 p-4 bg-white rounded-xl border border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
 <div class="text-center sm:text-left">
 <span class="text-xs text-slate-500 block">Calculated Unit Price:</span>
-<span class="text-xl font-black text-slate-900" id="calculated-unit-price">$12.50</span>
-<span class="text-xs font-semibold text-emerald-600 ml-2" id="calculated-savings">Total Savings: $62.50</span>
+<span class="text-xl font-black text-slate-900" id="calculated-unit-price">$6.39</span>
+<span class="text-xs font-semibold text-emerald-600 ml-2" id="calculated-savings">Total Savings: $39.95</span>
 </div>
 <div class="text-center sm:text-right">
 <span class="text-xs text-slate-500 block">Estimated Total:</span>
-<span class="text-3xl font-black text-brand-600" id="calculated-total-price">$312.50</span>
+<span class="text-3xl font-black text-brand-600" id="calculated-total-price">$159.80</span>
 </div>
 </div>
-<p class="mt-3 text-[10px] leading-snug text-slate-400">*Bulk pricing applies to eligible products only. Quantities are counted per eligible product line. Prices are indicative; final quote is confirmed on your purchase order.</p>
+<p class="mt-3 text-[10px] leading-snug text-slate-400">*Bulk discounts apply to eligible products only. Quantities are counted per product. Estimates are indicative; final pricing is confirmed on your quote or purchase order.</p>
 <div class="mt-6 flex flex-col sm:flex-row gap-3">
 <button class="flex-1 py-3 px-5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg text-sm transition text-center shadow-sm" type="button">
                 Submit Purchase Order Query
@@ -854,14 +894,14 @@
 <h3 class="text-xl font-extrabold text-slate-900">Check Delivery Times in Australia<span class="info-tip"><button type="button" class="info-btn" aria-label="How delivery times are estimated">i</button><span class="info-pop" role="tooltip" style="left:auto;right:-8px;">
 <b>How delivery is estimated</b>
 <ul>
-<li>Postcode is matched to a <b>delivery zone</b>: Local SA (5000–5999), East Coast Metro (Sydney, Melbourne, Brisbane), or Regional &amp; Remote (WA, NT, regional QLD).</li>
-<li>Each zone has a fixed <b>transit window in business days</b> for Priority, Express and Standard (Australia Post).</li>
-<li>Orders placed before <b>1:00 PM ACST</b> enter production the same business day; after that, the next business day.</li>
-<li>Transit days start once the order is dispatched, after engraving.</li>
+<li>Delivery is grouped into <b>three zones</b>: Adelaide Metro, East Coast Metro (Melbourne, Sydney, Brisbane), and Regional, WA &amp; NT.</li>
+<li>Each zone has a fixed <b>express transit window in business days</b>: 1–2, 2–3 and 3–5 days respectively.</li>
+<li>Orders are made in our Prospect, SA workshop and sent via Australia Post or Express Courier.</li>
+<li>Orders placed before <b>1:00 PM ACST</b> enter production the same business day.</li>
 </ul>
-<div class="info-note">Currently an indicative zone table: the schedule shown is static and does not yet change per postcode or return live Australia Post quotes.</div>
+<div class="info-note">Indicative windows, consistent with the Button Badges page. The schedule is static and does not yet change per postcode or return live carrier quotes.</div>
 </span></span></h3>
-<p class="text-xs text-slate-600 mt-1">Enter your postcode below to estimate exact transit delivery windows and estimated arrival dates for standard and express shipping.</p>
+<p class="text-xs text-slate-600 mt-1">Enter your postcode below to estimate exact transit delivery windows and estimated arrival windows for express shipping.</p>
 <form class="mt-5 flex gap-2" onsubmit="event.preventDefault(); document.getElementById('postcode-result').classList.remove('hidden');">
 <div class="relative flex-1">
 <input class="w-full text-sm font-semibold rounded-lg border-slate-300 focus:border-brand-600 focus:ring-brand-600 py-2.5" id="postcode-input" placeholder="Enter 4-Digit Postcode (e.g. 5000)" type="text" value="5000"/>
@@ -876,12 +916,12 @@
 <div class="space-y-2 text-xs">
 <div class="p-3 bg-white rounded-lg border border-slate-200 flex justify-between items-center">
 <div>
-<span class="font-bold text-slate-900 block">Local SA (5000–5999)</span>
+<span class="font-bold text-slate-900 block">Adelaide Metro</span>
 <span class="text-slate-500 text-[11px]">Direct from Prospect workshop</span>
 </div>
 <div class="text-right">
-<span class="font-bold text-brand-600 block">Priority: 1d | Express: 1-2d</span>
-<span class="text-slate-500 text-[11px]">Standard: 2-3d</span>
+<span class="font-bold text-brand-600 block">1–2 business days</span>
+<span class="text-slate-500 text-[11px]">Express</span>
 </div>
 </div>
 <div class="p-3 bg-white rounded-lg border border-slate-200 flex justify-between items-center">
@@ -890,18 +930,18 @@
 <span class="text-slate-500 text-[11px]">Sydney, Melbourne, Brisbane</span>
 </div>
 <div class="text-right">
-<span class="font-bold text-slate-800 block">Priority: 1-2d | Express: 2-3d</span>
-<span class="text-slate-500 text-[11px]">Standard: 4-5d</span>
+<span class="font-bold text-slate-800 block">2–3 business days</span>
+<span class="text-slate-500 text-[11px]">Express</span>
 </div>
 </div>
 <div class="p-3 bg-white rounded-lg border border-slate-200 flex justify-between items-center">
 <div>
-<span class="font-bold text-slate-900 block">Regional &amp; Remote</span>
-<span class="text-slate-500 text-[11px]">WA, NT, Regional Queensland</span>
+<span class="font-bold text-slate-900 block">Regional, WA &amp; NT</span>
+<span class="text-slate-500 text-[11px]">WA, NT, regional areas</span>
 </div>
 <div class="text-right">
-<span class="font-bold text-slate-800 block">Priority: 2-3d | Express: 3-5d</span>
-<span class="text-slate-500 text-[11px]">Standard: 6-8d</span>
+<span class="font-bold text-slate-800 block">3–5 business days</span>
+<span class="text-slate-500 text-[11px]">Express</span>
 </div>
 </div>
 </div>
@@ -1097,6 +1137,7 @@
 <li><a class="hover:text-white transition" href="categories/metal-plaques.html">Metal Plaques &amp; Honours Boards</a></li>
 <li><a class="hover:text-white transition" href="categories/id-cards.html">Corporate ID Cards &amp; Lanyards</a></li>
 <li><a class="hover:text-white transition" href="categories/badge-machines.html">Button Machines &amp; Components</a></li>
+<li><a class="hover:text-white transition" href="categories/button-badges.html">Custom Button Badges &amp; Fridge Magnets</a></li>
 </ul>
 </div>
 <!-- Payment & Invoicing -->
@@ -1192,30 +1233,46 @@
     const savingsEl = document.getElementById('calculated-savings');
     const totalPriceEl = document.getElementById('calculated-total-price');
 
+    const productEl = document.getElementById('bulk-product');
+    const tiers = document.querySelectorAll('.tier-tile');
+
+    // Tier discounts match the Button Badges category page. 50+ units is quote-only.
     function calculateBulk(qty) {
-      let unitRate = 15.00;
-      if (qty >= 100) {
-        unitRate = 7.50;
-      } else if (qty >= 50) {
-        unitRate = 9.90;
+      const listPrice = parseFloat(productEl.value);
+      let discount = 0;
+      if (qty >= 50) {
+        discount = null;
+      } else if (qty >= 25) {
+        discount = 0.20;
       } else if (qty >= 10) {
-        unitRate = 12.50;
+        discount = 0.10;
       }
 
-      const total = qty * unitRate;
-      const baseCost = qty * 15.00;
-      const savings = baseCost - total;
-
       qtyVal.textContent = qty;
-      unitPriceEl.textContent = '$' + unitRate.toFixed(2);
-      savingsEl.textContent = 'Total Savings: $' + savings.toFixed(2);
-      totalPriceEl.textContent = '$' + total.toFixed(2);
+      if (discount === null) {
+        unitPriceEl.textContent = 'Custom';
+        savingsEl.textContent = 'B2B rates on request';
+        totalPriceEl.textContent = 'Get a Quote';
+      } else {
+        const total = qty * listPrice * (1 - discount);
+        const savings = qty * listPrice - total;
+        unitPriceEl.textContent = '$' + (listPrice * (1 - discount)).toFixed(2);
+        savingsEl.textContent = 'Total Savings: $' + savings.toFixed(2);
+        totalPriceEl.textContent = '$' + total.toFixed(2);
+      }
+
+      let active = null;
+      tiers.forEach((t) => {
+        t.classList.remove('active');
+        if (qty >= parseInt(t.dataset.min, 10)) active = t;
+      });
+      if (active) active.classList.add('active');
     }
 
     if (slider) {
-      slider.addEventListener('input', (e) => {
-        calculateBulk(parseInt(e.target.value, 10));
-      });
+      slider.addEventListener('input', () => calculateBulk(parseInt(slider.value, 10)));
+      productEl.addEventListener('change', () => calculateBulk(parseInt(slider.value, 10)));
+      calculateBulk(parseInt(slider.value, 10));
     }
   </script>
 <!-- END: InteractiveScripts -->
