@@ -951,7 +951,7 @@ Object.keys(ProductCatalog.products).forEach(prodKey => {
     html = html.replace(/{{canonicalUrl}}/g, `https://www.badgestore.com.au/products/${prod.id}.html`);
     html = html.replace(/{{ogType}}/g, 'product');
     html = html.replace(/{{ogImage}}/g, prod.image);
-    html = html.replace(/{{ogImageAlt}}/g, `Configure and Buy Custom ${prod.name} online from BadgeStore Australia`);
+    html = html.replace(/{{ogImageAlt}}/g, `Buy Custom ${prod.name} online from BadgeStore Australia`);
 
     // Navigation Menus
     html = html.replace(/{{navMenu}}/g, compileNavigation('../'));
