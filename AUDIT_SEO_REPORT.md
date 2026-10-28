@@ -9,7 +9,7 @@ Detailed per-page checklists:
 ## Verification (both audits)
 - JSON-LD: 41/41 files parse clean, before and after edits.
 - FAQ `<details>` count unchanged (6) on every edited file.
-- `node scripts/sync-collection-overview.js --check` still clean after edits.
+- the former sync script check (script since removed) still clean after edits.
 - Nav/footer/breadcrumb/dev-tooltip markup untouched everywhere.
 - Only 5 files edited (see diff below) — all other findings are flagged, not fixed, per audit-first scope.
 
@@ -19,7 +19,7 @@ Detailed per-page checklists:
 3. `products/aluminium-channel-desk-plate.html`, `products/mahogany-wedge-desk-plate.html` — only 2 of 22 products whose copy scored zero on cluster/entity terms (both are non-standard desk-plate constructions the cluster list didn't anticipate). Fresh Ahrefs lookup → wove in "desk signs" / "reception desk display" / "acrylic name plate" naturally into the hero + specs-intro sentences only. No price/material/SKU changed.
 
 ## Critical findings — NOT yet fixed (recommend a follow-up pass)
-1. **~26 Featured Product cards across 15/18 category pages show a product name that doesn't match that card's own image/price** — traced to stale `<h1>` tags on the linked product pages themselves (outside today's product-content scope, since those H1s are the source of truth the sync script trusts). Fix the H1s, then re-run `node scripts/sync-collection-overview.js`.
+1. **~26 Featured Product cards across 15/18 category pages show a product name that doesn't match that card's own image/price** — traced to stale `<h1>` tags on the linked product pages themselves (outside today's product-content scope, since those H1s are the source of truth the sync script trusts). Fix the H1s, then re-run the former sync script (since removed; update the category cards by hand).
 2. `australian-made-badge-machines.html` / `imported-badge-machines.html` — `<title>` tags are 170+ character marketing sentences, not real titles.
 3. `index.html` — title/og:title/twitter:title all read "...| Badge Store Redesign", an internal dev label leaking into production-facing tags.
 4. **All 41 pages** — canonical/og:url point to `badgestore.com.au` (the real live site) instead of this redesign's own GitHub Pages URL. Highest-impact technical SEO issue if this redesign is ever deployed/indexed as-is.
