@@ -875,7 +875,7 @@ Object.keys(ProductCatalog.categories).forEach(catKey => {
                         <span class="text-lg font-extrabold text-slate-900">${prod.priceRange}</span>
                     </div>
                     <a href="../products/${prod.id}.html" class="bg-slate-900 hover:bg-brand-red text-white text-xs font-semibold px-3.5 py-2 rounded-lg transition-colors">
-                        Configure
+                        View Product
                     </a>
                 </div>
             </div>
