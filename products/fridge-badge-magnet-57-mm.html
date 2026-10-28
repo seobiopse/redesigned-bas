@@ -300,15 +300,16 @@
 <!-- END: BreadcrumbNavigation -->
 <!-- BEGIN: ConfiguratorAndProductHero -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-<!-- LEFT COLUMN: Product preview & delivery windows -->
+<!-- LEFT COLUMN: Product Live Preview, Gallery & Shipping Estimator -->
 <section class="lg:col-span-6 space-y-6">
+<!-- Live Preview Card -->
 <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-slate-50/50 to-white">
 <div class="absolute top-4 left-4 flex gap-2">
 <span class="bg-blue-50 text-blue-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-blue-200">Full Colour Print</span>
 <span class="bg-gray-100 text-gray-600 text-[11px] font-medium px-2.5 py-1 rounded-full border border-gray-200">57mm diameter</span>
 </div>
-<div class="py-14 sm:py-16 w-full flex items-center justify-center">
-<div class="relative flex items-center justify-center text-center bg-white border-8 border-slate-200 shadow-lg" id="live-badge-preview" style="width:230px; height:230px; border-radius:24px; background-image: radial-gradient(circle at 35% 25%, #ffffff 0%, #f1f5f9 100%);">
+<div class="py-14 sm:py-20 w-full flex items-center justify-center">
+<div class="relative flex items-center justify-center text-center bg-white border-8 border-slate-200 shadow-lg transition-all duration-200 hover:scale-[1.01]" id="live-badge-preview" style="width:230px; height:230px; max-width:100%; border-radius:24px; background-image: radial-gradient(circle at 35% 25%, #ffffff 0%, #f1f5f9 100%);">
 <div class="px-4">
 <p class="text-[10px] font-bold tracking-widest text-brand-red uppercase">Your Artwork</p>
 <p class="text-sm sm:text-base font-extrabold text-slate-900 mt-1">57mm Fridge Magnet</p>
@@ -318,18 +319,26 @@
 </div>
 <p class="text-xs text-center text-gray-500">Illustrative preview. We send a free proof of your artwork before anything is made.</p>
 </div>
-<!-- Delivery windows -->
+<!-- Attachment Thumbnails Gallery -->
+<div class="grid grid-cols-2 gap-3"><button class="border-2 border-brand-red bg-white rounded-xl p-2.5 text-left flex flex-col items-center justify-center text-center shadow-sm" type="button"><div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-700 mb-1"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div><span class="text-[11px] font-bold text-gray-900 leading-tight">Front Print</span><span class="text-[9px] text-brand-red font-semibold">Active View</span></button><button class="border border-gray-200 hover:border-gray-400 bg-white rounded-xl p-2.5 text-left flex flex-col items-center justify-center text-center transition" type="button"><div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-700 mb-1"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div><span class="text-[11px] font-medium text-gray-900 leading-tight">Magnetic Back</span><span class="text-[9px] text-gray-500">Strong magnet</span></button></div>
+<!-- Shipping Estimator Card -->
 <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-<h2 class="font-semibold text-gray-900 text-sm mb-3">Delivery Windows (Express)</h2>
-<div class="flex flex-col gap-2 text-xs text-gray-600">
-<div class="flex justify-between items-center"><span class="flex items-center space-x-1.5 font-medium text-gray-700"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>Adelaide Metro:</span></span><span class="font-semibold text-gray-900">1–2 business days</span></div>
-<div class="flex justify-between items-center"><span class="flex items-center space-x-1.5 font-medium text-gray-700"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>East Coast Metro (Melb / Syd / Bris):</span></span><span class="font-semibold text-gray-900">2–3 business days</span></div>
-<div class="flex justify-between items-center"><span class="flex items-center space-x-1.5 font-medium text-gray-700"><span class="w-2 h-2 rounded-full bg-amber-500"></span><span>Regional, WA &amp; NT:</span></span><span class="font-semibold text-gray-900">3–5 business days</span></div>
+<div class="flex items-center space-x-2 mb-3">
+<svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<h4 class="font-semibold text-gray-900 text-sm">Estimate Delivery Windows</h4>
 </div>
-<p class="text-[11px] text-gray-500 mt-3">Made in our Prospect, South Australia workshop and sent via Australia Post or Express Courier.</p>
+<div class="flex gap-2">
+<div class="relative flex-1"><input class="w-full text-sm rounded-lg border-gray-300 focus:ring-brand-red focus:border-brand-red" id="postcode-input" maxlength="4" placeholder="Enter 4-digit postcode (e.g. 5000)" type="text"/></div>
+<button class="px-4 py-2 bg-brand-red hover:bg-brand-redHover text-white text-sm font-semibold rounded-lg shadow-sm transition flex-shrink-0" id="calc-delivery-btn" type="button">Calculate</button>
+</div>
+<div class="mt-4 pt-3 border-t border-gray-100 flex flex-col gap-2 text-xs text-gray-600">
+<div class="flex justify-between items-center"><span class="flex items-center space-x-1.5 font-medium text-gray-700"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span>Adelaide Metro:</span></span><span class="font-semibold text-gray-900">1 – 2 Business Days</span></div>
+<div class="flex justify-between items-center"><span class="flex items-center space-x-1.5 font-medium text-gray-700"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>East Coast Metro (Melb / Syd / Bris):</span></span><span class="font-semibold text-gray-900">2 – 3 Business Days (Express)</span></div>
+<div class="flex justify-between items-center"><span class="flex items-center space-x-1.5 font-medium text-gray-700"><span class="w-2 h-2 rounded-full bg-amber-500"></span><span>Regional, WA &amp; NT:</span></span><span class="font-semibold text-gray-900">3 – 5 Business Days (Express)</span></div>
+</div>
 </div>
 </section>
-<!-- RIGHT COLUMN: Product details & order form -->
+<!-- RIGHT COLUMN: Order Form -->
 <section class="lg:col-span-6 bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
 <div class="border-b border-gray-200 pb-5">
 <div class="flex flex-wrap items-center justify-between gap-2">
@@ -338,7 +347,7 @@
 </div>
 <div class="mt-3 flex items-baseline space-x-3">
 <span class="text-3xl font-extrabold text-brand-red tracking-tight" id="live-hero-price">$7.59 - $9.49</span>
-<span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">AUD per magnet</span>
+<span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">AUD per magnet (inc. GST)</span>
 </div>
 <p class="mt-3 text-sm text-slate-600 leading-relaxed">The larger 57mm format gives your logo or message more space and makes these fridge magnets easy to notice from a distance. A reliable magnetic backing keeps them firmly in place.</p>
 <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 font-medium">57mm diameter</span><span class="px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 font-medium">Full colour print</span><span class="px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 font-medium">Strong magnetic backing</span><span class="px-2.5 py-1 rounded-md bg-gray-100 text-gray-700 font-medium">Free proofs</span></div>
@@ -346,20 +355,21 @@
 <form class="mt-6 space-y-6" id="badge-configurator-form" onsubmit="event.preventDefault();">
 <!-- Step 1: Artwork -->
 <div class="space-y-2">
-<label class="block text-sm font-bold text-gray-900">1. Your Artwork <span class="text-xs font-normal text-gray-500">(optional, or email it later)</span></label>
+<label class="block text-sm font-bold text-gray-900">1. Your Artwork <span class="text-xs font-normal text-gray-500">(Optional - or email later)</span></label>
 <div class="border-2 border-dashed border-gray-300 hover:border-brand-red rounded-xl p-4 text-center cursor-pointer transition bg-gray-50/50">
-<div class="flex text-xs text-gray-600 justify-center">
-<label class="relative cursor-pointer font-semibold text-brand-red hover:underline focus-within:outline-none" for="logo-upload-input"><span>Upload artwork (AI, SVG, PDF, PNG)</span><input class="sr-only" id="logo-upload-input" name="logo-upload-input" type="file"/></label>
+<svg class="mx-auto h-8 w-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 48 48"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div class="mt-2 flex text-xs text-gray-600 justify-center">
+<label class="relative cursor-pointer font-semibold text-brand-red hover:underline focus-within:outline-none" for="logo-upload-input"><span>Upload Artwork (AI, SVG, PDF, PNG)</span><input class="sr-only" id="logo-upload-input" name="logo-upload-input" type="file"/></label>
 <span class="pl-1">or drag &amp; drop here</span>
 </div>
-<p class="text-[11px] text-gray-500 mt-1">We send a free proof before production.</p>
+<p class="text-[11px] text-gray-500 mt-1">We will send a free full-colour digital proof before production.</p>
 </div>
 </div>
 
-<!-- Quantity & pricing -->
+<!-- Quantity & Dynamic Pricing Summary -->
 <div class="bg-slate-50 border border-gray-200 rounded-xl p-4 space-y-4">
 <div class="flex items-center justify-between">
-<label class="text-sm font-bold text-gray-900" for="quantity-counter">2. Quantity:</label>
+<label class="text-sm font-bold text-gray-900" for="quantity-counter">Order Details &amp; Quantity:</label>
 <div class="flex items-center space-x-2">
 <button class="w-8 h-8 rounded-lg border border-gray-300 bg-white hover:bg-gray-100 flex items-center justify-center font-bold text-gray-700" id="btn-qty-minus" type="button" aria-label="Decrease quantity">−</button>
 <input class="w-16 py-1 text-center font-bold text-sm rounded-lg border-gray-300 focus:ring-brand-red focus:border-brand-red" id="quantity-counter" max="10000" min="1" type="number" value="1"/>
@@ -367,16 +377,24 @@
 </div>
 </div>
 <div class="border-t border-gray-200 pt-3 space-y-1.5 text-xs text-gray-600">
-<div class="flex justify-between"><span>Unit Price:</span><span class="font-medium text-gray-900" id="summary-unit-price">$9.49</span></div>
+<div class="flex justify-between"><span>Unit Price (Base):</span><span class="font-medium text-gray-900" id="summary-unit-price">$9.49</span></div>
 <div class="flex justify-between text-emerald-700 font-medium"><span>Bulk Volume Savings:</span><span id="summary-savings">$0.00</span></div>
 <div class="flex justify-between items-baseline pt-2 border-t border-gray-200"><span class="text-sm font-bold text-gray-900">Subtotal Cost:</span><span class="text-2xl font-extrabold text-brand-navy" id="summary-subtotal">$9.49</span></div>
 </div>
 <p class="text-[10px] leading-snug text-gray-400">*Bulk discounts apply to eligible products only. Quantities are counted per product. Estimates are indicative; final pricing is confirmed on your quote or purchase order.</p>
 <div class="pt-2 space-y-2">
-<button class="w-full py-3.5 px-6 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-base shadow-md hover:shadow-lg transition" id="btn-add-cart" type="button">Add To Cart</button>
-<a class="block text-center w-full py-2.5 px-4 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 font-semibold text-xs transition" href="mailto:admin@badgestore.com.au?subject=Quote%20request%3A%2057mm%20Custom%20Fridge%20Magnets">Request a Quote / Purchase Order</a>
+<button class="w-full py-3.5 px-6 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-base shadow-md hover:shadow-lg transition flex items-center justify-center space-x-2" id="btn-add-cart" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Add Fridge Magnets To Cart</span>
+</button>
+<a class="block text-center w-full py-2.5 px-4 rounded-xl border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 font-semibold text-xs transition" href="mailto:admin@badgestore.com.au?subject=Quote%20request%3A%2057mm%20Custom%20Fridge%20Magnets">Request Official Corporate Quote / PO Invoice</a>
 </div>
-<p class="text-[11px] text-gray-500 font-medium text-center">Free proof on every order</p>
+<div class="text-center pt-1">
+<p class="text-[11px] text-gray-500 font-medium flex items-center justify-center space-x-1">
+<svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span>Free Digital Proof created by graphic artists prior to production</span>
+</p>
+</div>
 </div>
 </form>
 </section>
@@ -384,42 +402,53 @@
 <!-- END: ConfiguratorAndProductHero -->
 <!-- BEGIN: TechnicalSpecificationsAndBulkGuide -->
 <section class="mt-16 bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 shadow-sm" id="bulk-order-section">
-<span class="inline-block bg-red-50 text-brand-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Product Overview</span>
-<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">57mm Custom Fridge Magnets Specifications &amp; Bulk Pricing</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-<div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
-<h3 class="text-base font-bold text-gray-900 mb-3">Specifications</h3>
-<dl class="grid grid-cols-3 gap-y-2 text-sm"><dt class="font-semibold text-gray-600 col-span-1">Dimensions Size</dt><dd class="col-span-2 text-gray-900">57mm diameter</dd><dt class="font-semibold text-gray-600 col-span-1">Build Material</dt><dd class="col-span-2 text-gray-900">Full colour printed face with strong magnetic backing</dd><dt class="font-semibold text-gray-600 col-span-1">Print</dt><dd class="col-span-2 text-gray-900">Full colour printing</dd><dt class="font-semibold text-gray-600 col-span-1">Attachment</dt><dd class="col-span-2 text-gray-900">Strong magnetic backing</dd><dt class="font-semibold text-gray-600 col-span-1">Proofing</dt><dd class="col-span-2 text-gray-900">Free proof on every order</dd><dt class="font-semibold text-gray-600 col-span-1">Made In</dt><dd class="col-span-2 text-gray-900">Prospect, South Australia</dd><dt class="font-semibold text-gray-600 col-span-1">SKU</dt><dd class="col-span-2 text-gray-900">BAS-FM-57</dd></dl>
+<div class="mb-8">
+<span class="text-xs font-bold uppercase tracking-wider text-brand-red bg-red-50 px-2.5 py-1 rounded">Product Overview</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">57mm Custom Fridge Magnets Specifications &amp; Bulk Guide</h2>
 </div>
-<div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
-<h3 class="text-base font-bold text-gray-900 mb-3">Bulk Quantity Discounts</h3>
-<table class="w-full text-xs border-collapse bg-white border border-gray-200 rounded-lg overflow-hidden">
-<thead><tr class="bg-brand-navy text-white font-bold"><th class="py-2 px-3 text-left">Quantity</th><th class="py-2 px-3 text-right">Unit Price</th><th class="py-2 px-3 text-right">Discount</th></tr></thead>
-<tbody><tr data-tier-min="1"><td class="py-2 px-3">1 – 9 units</td><td class="py-2 px-3 text-right">$9.49</td><td class="py-2 px-3 text-right">Standard</td></tr><tr data-tier-min="10"><td class="py-2 px-3">10 – 24 units</td><td class="py-2 px-3 text-right">$8.54</td><td class="py-2 px-3 text-right">10% off</td></tr><tr data-tier-min="25"><td class="py-2 px-3">25 – 49 units</td><td class="py-2 px-3 text-right">$7.59</td><td class="py-2 px-3 text-right">20% off</td></tr><tr data-tier-min="50"><td class="py-2 px-3">50+ units</td><td class="py-2 px-3 text-right">Custom quote</td><td class="py-2 px-3 text-right">B2B rates</td></tr></tbody>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+<!-- Left: Technical Specification Breakdown -->
+<div>
+<h3 class="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Technical Specifications</h3>
+<p class="text-sm text-gray-600 mb-4">The <strong>57mm Custom Fridge Magnets</strong> (SKU: <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">BAS-FM-57</code>) is printed in full colour and made to order in Prospect, South Australia. Here's the build breakdown:</p>
+<dl class="divide-y divide-gray-100 text-sm"><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">Dimensions Size</dt><dd class="col-span-2 text-gray-900">57mm diameter</dd></div><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">Build Material</dt><dd class="col-span-2 text-gray-900">Full colour printed face with strong magnetic backing</dd></div><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">Print</dt><dd class="col-span-2 text-gray-900">Full colour printing</dd></div><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">Attachment</dt><dd class="col-span-2 text-gray-900">Strong magnetic backing</dd></div><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">Proofing</dt><dd class="col-span-2 text-gray-900">Free proof on every order</dd></div><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">Made In</dt><dd class="col-span-2 text-gray-900">Prospect, South Australia</dd></div><div class="py-2.5 grid grid-cols-3 gap-2"><dt class="font-semibold text-gray-600">SKU</dt><dd class="col-span-2 text-gray-900">BAS-FM-57</dd></div></dl>
+</div>
+<!-- Right: Wholesale Quantity Discount Table -->
+<div>
+<h3 class="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Bulk Quantity Discounts</h3>
+<p class="text-xs text-gray-500 mb-3">Unit price drops as your order quantity grows:</p>
+<div class="overflow-hidden border border-gray-200 rounded-xl">
+<table class="min-w-full divide-y divide-gray-200 text-xs sm:text-sm">
+<thead class="bg-gray-50 text-gray-700 font-semibold"><tr><th class="px-4 py-3 text-left" scope="col">Quantity</th><th class="px-4 py-3 text-left" scope="col">Unit Price</th><th class="px-4 py-3 text-right" scope="col">Discount</th></tr></thead>
+<tbody class="divide-y divide-gray-100 bg-white text-gray-700"><tr class="hover:bg-gray-50" data-tier-min="1"><td class="px-4 py-2.5 font-medium">1 – 9 units</td><td class="px-4 py-2.5">$9.49</td><td class="px-4 py-2.5 text-right font-medium text-gray-500">Standard</td></tr><tr class="hover:bg-gray-50" data-tier-min="10"><td class="px-4 py-2.5 font-medium">10 – 24 units</td><td class="px-4 py-2.5">$8.54</td><td class="px-4 py-2.5 text-right font-medium text-gray-500">10% off</td></tr><tr class="hover:bg-gray-50" data-tier-min="25"><td class="px-4 py-2.5 font-medium">25 – 49 units</td><td class="px-4 py-2.5">$7.59</td><td class="px-4 py-2.5 text-right font-medium text-gray-500">20% off</td></tr><tr class="hover:bg-gray-50" data-tier-min="50"><td class="px-4 py-2.5 font-medium">50+ units</td><td class="px-4 py-2.5">Custom quote</td><td class="px-4 py-2.5 text-right font-medium text-gray-500">B2B rates</td></tr></tbody>
 </table>
-<p class="text-[11px] text-gray-500 mt-2">*Discounts apply to eligible products only. Final pricing is confirmed on your quote or purchase order.</p>
+</div>
+<p class="mt-3 text-xs text-gray-500 italic">* Discounts apply to eligible products only. Final pricing is confirmed on your quote or purchase order. Contact us for custom B2B rates on 50+ units.</p>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-<div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
-<h3 class="text-base font-bold text-gray-900 mb-2">Magnetic Backing</h3>
-<p class="text-sm text-gray-600 leading-relaxed">Each fridge magnet has a strong magnetic backing designed to hold on fridges, whiteboards and other metal surfaces.</p>
+<!-- Feature Callout Cards -->
+<div class="mt-8 pt-8 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
+<h4 class="font-bold text-sm text-gray-900 mb-1">Magnetic Backing</h4>
+<p class="text-xs text-gray-600 leading-relaxed">Each fridge magnet has a strong magnetic backing designed to hold on fridges, whiteboards and other metal surfaces.</p>
 </div>
-<div class="bg-slate-50 p-6 rounded-xl border border-gray-200">
-<h3 class="text-base font-bold text-gray-900 mb-2">Ordering &amp; Express Dispatch</h3>
-<p class="text-sm text-gray-600 leading-relaxed">We support Purchase Orders for schools, councils and corporate accounts. Made at our Prospect, SA workshop and shipped Australia-wide via Australia Post or Express Courier.</p>
-<p class="text-sm mt-3"><a class="text-brand-red font-semibold hover:underline" href="../categories/button-badges.html">&larr; Back to all Button Badges</a></p>
+<div class="bg-gray-50 p-5 rounded-xl border border-gray-100">
+<h4 class="font-bold text-sm text-gray-900 mb-1">Ordering &amp; Express Dispatch</h4>
+<p class="text-xs text-gray-600 leading-relaxed">We support official Purchase Orders (PO) for schools, councils, and corporate accounts. Manufactured at our Prospect, SA facility and shipped nationwide via Australia Post or Express Courier.</p>
 </div>
 </div>
 </section>
 <!-- END: TechnicalSpecificationsAndBulkGuide -->
 <!-- BEGIN: RelatedSizes -->
-<section class="mt-16" id="related-sizes"><h2 class="text-2xl font-extrabold text-gray-900 text-center">More Button Badge &amp; Fridge Magnet Sizes</h2><div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-6 max-w-4xl mx-auto"><a class="block bg-white border border-gray-200 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-25-mm.html"><span class="block text-sm font-bold text-gray-900">25mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $6.99</span></a><a class="block bg-white border border-gray-200 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-35-mm.html"><span class="block text-sm font-bold text-gray-900">35mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $7.99</span></a><a class="block bg-white border border-gray-200 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-57-mm.html"><span class="block text-sm font-bold text-gray-900">57mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $8.99</span></a><a class="block bg-white border border-gray-200 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-85-mm.html"><span class="block text-sm font-bold text-gray-900">85mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $10.49</span></a><a class="block bg-white border border-gray-200 hover:border-brand-red rounded-xl p-4 transition" href="fridge-badge-magnet-35-mm.html"><span class="block text-sm font-bold text-gray-900">35mm Fridge Magnets</span><span class="block text-xs text-gray-500 mt-1">from $7.99</span></a><a class="block bg-white border border-gray-200 hover:border-brand-red rounded-xl p-4 transition" href="fridge-badge-magnet-85-mm.html"><span class="block text-sm font-bold text-gray-900">85mm Fridge Magnets</span><span class="block text-xs text-gray-500 mt-1">from $10.99</span></a></div><p class="text-center text-sm mt-4"><a class="text-brand-red font-semibold hover:underline" href="../categories/button-badges.html">View the full Button Badges range</a> &middot; <a class="text-brand-red font-semibold hover:underline" href="../index.html#bulk-product">Try the bulk discount calculator</a></p></section>
+<section class="mt-16 bg-white border border-gray-200 rounded-2xl p-6 sm:p-10 shadow-sm" id="related-sizes"><h2 class="text-2xl font-bold text-gray-900 text-center">More Button Badge &amp; Fridge Magnet Sizes</h2><div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-6 max-w-4xl mx-auto"><a class="block bg-gray-50 border border-gray-100 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-25-mm.html"><span class="block text-sm font-bold text-gray-900">25mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $6.99</span></a><a class="block bg-gray-50 border border-gray-100 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-35-mm.html"><span class="block text-sm font-bold text-gray-900">35mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $7.99</span></a><a class="block bg-gray-50 border border-gray-100 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-57-mm.html"><span class="block text-sm font-bold text-gray-900">57mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $8.99</span></a><a class="block bg-gray-50 border border-gray-100 hover:border-brand-red rounded-xl p-4 transition" href="button-badge-85-mm.html"><span class="block text-sm font-bold text-gray-900">85mm Button Badges</span><span class="block text-xs text-gray-500 mt-1">from $10.49</span></a><a class="block bg-gray-50 border border-gray-100 hover:border-brand-red rounded-xl p-4 transition" href="fridge-badge-magnet-35-mm.html"><span class="block text-sm font-bold text-gray-900">35mm Fridge Magnets</span><span class="block text-xs text-gray-500 mt-1">from $7.99</span></a><a class="block bg-gray-50 border border-gray-100 hover:border-brand-red rounded-xl p-4 transition" href="fridge-badge-magnet-85-mm.html"><span class="block text-sm font-bold text-gray-900">85mm Fridge Magnets</span><span class="block text-xs text-gray-500 mt-1">from $10.99</span></a></div><p class="text-center text-sm mt-4"><a class="text-brand-red font-semibold hover:underline" href="../categories/button-badges.html">View the full Button Badges range</a> &middot; <a class="text-brand-red font-semibold hover:underline" href="../index.html#bulk-product">Try the bulk discount calculator</a></p></section>
 <!-- END: RelatedSizes -->
 <!-- BEGIN: FrequentlyAskedQuestions -->
 <section class="mt-16 max-w-4xl mx-auto w-full">
-<h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center">Frequently Asked Questions</h2>
-<div class="space-y-3 mt-6"><details class="group border border-gray-200 rounded-xl bg-white p-5 transition shadow-sm open:shadow-md" open><summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none text-sm sm:text-base"><span>Why choose 57mm over 35mm?</span><span class="transition group-open:rotate-180 text-brand-red ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></summary><p class="text-sm text-gray-600 mt-3 leading-relaxed border-t border-gray-100 pt-3">More print area and better visibility from a distance.</p></details>
+<div class="text-center mb-10">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+<p class="mt-2 text-sm text-gray-600">Got questions about our fridge magnets or artwork submission?</p>
+</div>
+<div class="space-y-4" data-purpose="faq-accordions"><details class="group border border-gray-200 rounded-xl bg-white p-5 transition shadow-sm open:shadow-md" open><summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none text-sm sm:text-base"><span>Why choose 57mm over 35mm?</span><span class="transition group-open:rotate-180 text-brand-red ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></summary><p class="text-sm text-gray-600 mt-3 leading-relaxed border-t border-gray-100 pt-3">More print area and better visibility from a distance.</p></details>
 <details class="group border border-gray-200 rounded-xl bg-white p-5 transition shadow-sm open:shadow-md"><summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none text-sm sm:text-base"><span>Are they strong enough for a fridge?</span><span class="transition group-open:rotate-180 text-brand-red ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></summary><p class="text-sm text-gray-600 mt-3 leading-relaxed border-t border-gray-100 pt-3">They have a strong magnetic backing designed to stay in place on magnetic surfaces.</p></details>
 <details class="group border border-gray-200 rounded-xl bg-white p-5 transition shadow-sm open:shadow-md"><summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none text-sm sm:text-base"><span>Do you provide a proof?</span><span class="transition group-open:rotate-180 text-brand-red ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></summary><p class="text-sm text-gray-600 mt-3 leading-relaxed border-t border-gray-100 pt-3">Yes. Every order includes a free proof so you can approve your design before production.</p></details>
 <details class="group border border-gray-200 rounded-xl bg-white p-5 transition shadow-sm open:shadow-md"><summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none text-sm sm:text-base"><span>Where are these made?</span><span class="transition group-open:rotate-180 text-brand-red ml-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></summary><p class="text-sm text-gray-600 mt-3 leading-relaxed border-t border-gray-100 pt-3">Everything is designed, proofed and manufactured at our workshop in Prospect, South Australia.</p></details>
@@ -542,6 +571,19 @@
     document.getElementById('btn-qty-plus').addEventListener('click', function () { qtyInput.value = read() + 1; calc(read()); });
     document.getElementById('btn-qty-minus').addEventListener('click', function () { qtyInput.value = Math.max(1, read() - 1); calc(read()); });
     calc(read());
+  }
+
+  var pcBtn = document.getElementById('calc-delivery-btn');
+  var pcInput = document.getElementById('postcode-input');
+  if (pcBtn && pcInput) {
+    pcBtn.addEventListener('click', function () {
+      if (pcInput.value.trim().length === 4) {
+        pcBtn.textContent = 'Calculated \u2713';
+        setTimeout(function () { pcBtn.textContent = 'Calculate'; }, 2000);
+      } else {
+        alert('Please enter a valid 4-digit Australian postcode.');
+      }
+    });
   }
 
   var labels = { pin: 'Safety pin attachment', magnet: 'Magnet attachment', keychain: 'Keychain attachment' };
