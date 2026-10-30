@@ -198,8 +198,6 @@
       font: 400 12px/1.5 Inter, sans-serif; text-align: left; text-transform: none; letter-spacing: 0;
     }
     .info-tip:hover > .info-pop, .info-tip:focus-within > .info-pop { visibility: visible; opacity: 1; }
-    .tier-tile.active { background: #fef2f2; border-color: #fca5a5; }
-    .tier-tile.active span { color: #991b1b; }
     .info-pop b { color: #fff; }
     .info-pop ul { margin: 6px 0 0; padding-left: 16px; list-style: disc; }
     .info-pop li { margin-bottom: 3px; }
@@ -794,78 +792,51 @@
 </div>
 </section>
 <!-- END: CollectionsCatalogSection -->
-<!-- BEGIN: CalculatorAndShippingSection -->
-<section class="py-16 bg-white border-b border-slate-200" data-purpose="interactive-calculators">
+<!-- BEGIN: OrderingAndShippingSection -->
+<section class="py-16 bg-white border-b border-slate-200" data-purpose="ordering-and-shipping">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<!-- Bulk Calculator Card (Left Column) -->
+<!-- How Ordering Works (Left Column) -->
 <div class="lg:col-span-7 bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
 <div class="flex items-center gap-2 mb-2">
-<span class="px-2.5 py-0.5 rounded-full bg-brand-100 text-brand-700 font-bold text-xs uppercase">Wholesale Rates</span>
-<span class="text-xs text-slate-500">Live Volume Discount</span>
+<span class="px-2.5 py-0.5 rounded-full bg-brand-100 text-brand-700 font-bold text-xs uppercase">Simple Ordering</span>
+<span class="text-xs text-slate-500">Free proof on every order</span>
 </div>
-<h2 class="text-2xl font-extrabold text-slate-900">Calculate Bulk Corporate Discounts<span class="info-tip"><button type="button" class="info-btn" aria-label="How the bulk discount is calculated">i</button><span class="info-pop" role="tooltip">
-<b>How the discount is calculated</b>
-<ul>
-<li>Choose a product, then set the quantity. Each product has its own <b>unit-price tiers</b>: the unit price drops as the quantity grows.</li>
-<li>Tiers start at 10 units and run up to 10,000+ units (see the tier tiles).</li>
-<li>The tier price applies to <b>all units</b> of that product.</li>
-<li><b>Estimated Total</b> = quantity × tier unit price.</li>
-<li><b>Total Savings</b> = (quantity × 1-unit price) − Estimated Total.</li>
-<li>Example: 25 × 35mm Button Badge → $2.15 each → $53.75; savings = $199.75 − $53.75 = $146.00.</li>
-</ul>
-<div class="info-note">This calculator covers button badges and fridge magnets. Other product lines have their own pricing. Quantities are counted per product. Estimates are indicative; the final price is confirmed on your quote or purchase order.</div>
-</span></span></h2>
-<p class="text-xs sm:text-sm text-slate-600 mt-1">Ordering for a large team or franchise? We offer tier-based wholesale pricing. Slide the controller to check your savings instantly!</p>
-<!-- Tier Badges -->
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-6" id="tier-grid"></div>
-<!-- Product Selector -->
-<div class="mt-6">
-<label class="block text-sm font-bold text-slate-800 mb-1" for="bulk-product">Product:</label>
-<select class="w-full text-sm font-semibold rounded-lg border-slate-300 focus:border-brand-600 focus:ring-brand-600 py-2.5" id="bulk-product">
-<option value="button-badge-25-mm">Button Badge 25mm</option>
-<option value="button-badge-35-mm" selected>Button Badge 35mm</option>
-<option value="button-badge-57-mm">Button Badge 57mm</option>
-<option value="button-badge-85-mm">Button Badge 85mm</option>
-<option value="fridge-badge-magnet-35-mm">Fridge Magnet 35mm</option>
-<option value="fridge-badge-magnet-57-mm">Fridge Magnet 57mm</option>
-<option value="fridge-badge-magnet-85-mm">Fridge Magnet 85mm</option>
-</select>
+<h2 class="text-2xl font-extrabold text-slate-900">How Ordering Works</h2>
+<p class="text-xs sm:text-sm text-slate-600 mt-1">Four simple steps from choosing your badges to receiving them.</p>
+<ol class="mt-6 space-y-5">
+<li class="flex gap-4">
+<span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-600 text-white font-extrabold text-sm flex items-center justify-center">1</span>
+<div>
+<h3 class="text-base font-bold text-slate-900">Choose your product</h3>
+<p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">Browse our collections and pick the style, size and fastener that suits you. No minimum order on most products.</p>
 </div>
-<!-- Interactive Slider -->
-<div class="mt-6 space-y-3">
-<div class="flex justify-between items-center text-sm">
-<span class="font-bold text-slate-800">Number of Badges Needed:</span>
-<span class="font-black text-brand-600 text-lg" id="badge-qty-val">25</span>
+</li>
+<li class="flex gap-4">
+<span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-600 text-white font-extrabold text-sm flex items-center justify-center">2</span>
+<div>
+<h3 class="text-base font-bold text-slate-900">Add your name, text or artwork</h3>
+<p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">Enter your details online or upload your logo (AI, SVG, PDF or PNG). You can also email your artwork later.</p>
 </div>
-<input class="w-full accent-brand-600 cursor-pointer h-2 bg-slate-200 rounded-lg" id="bulk-slider" max="1000" min="1" type="range" value="25"/>
-<div class="flex justify-between text-[11px] text-slate-400 font-medium">
-<span>1 Unit</span>
-<span>250 Units</span>
-<span>500 Units</span>
-<span>1,000+ Units</span>
+</li>
+<li class="flex gap-4">
+<span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-600 text-white font-extrabold text-sm flex items-center justify-center">3</span>
+<div>
+<h3 class="text-base font-bold text-slate-900">Approve your free proof</h3>
+<p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">We send a free digital proof before anything is made. Nothing goes into production until you approve it.</p>
 </div>
+</li>
+<li class="flex gap-4">
+<span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-600 text-white font-extrabold text-sm flex items-center justify-center">4</span>
+<div>
+<h3 class="text-base font-bold text-slate-900">We make it and ship it</h3>
+<p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">Your order is made at our Prospect, South Australia workshop and shipped Australia-wide. See the delivery windows alongside.</p>
 </div>
-<!-- Calculation Output Box -->
-<div class="mt-8 p-4 bg-white rounded-xl border border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-<div class="text-center sm:text-left">
-<span class="text-xs text-slate-500 block">Calculated Unit Price:</span>
-<span class="text-xl font-black text-slate-900" id="calculated-unit-price">$2.15</span>
-<span class="text-xs font-semibold text-emerald-600 ml-2" id="calculated-savings">Total Savings: $146.00</span>
-</div>
-<div class="text-center sm:text-right">
-<span class="text-xs text-slate-500 block">Estimated Total:</span>
-<span class="text-3xl font-black text-brand-600" id="calculated-total-price">$53.75</span>
-</div>
-</div>
-<p class="mt-3 text-[10px] leading-snug text-slate-400">*Bulk discounts apply to eligible products only. Quantities are counted per product. Estimates are indicative; final pricing is confirmed on your quote or purchase order.</p>
-<div class="mt-6 flex flex-col sm:flex-row gap-3">
-<button class="flex-1 py-3 px-5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg text-sm transition text-center shadow-sm" type="button">
-                Submit Purchase Order Query
-              </button>
-<button class="py-3 px-5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold rounded-lg text-sm transition text-center" type="button">
-                Download Corporate Spec Sheet
-              </button>
+</li>
+</ol>
+<div class="mt-6 pt-5 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<p class="text-xs text-slate-600">Ordering for a school, council or business? We support Purchase Orders and invoicing.</p>
+<a class="inline-flex items-center justify-center px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-lg transition whitespace-nowrap" href="mailto:admin@badgestore.com.au?subject=Quote%20request">Request a Quote / PO</a>
 </div>
 </div>
 <!-- Postcode Shipping Transit Times Tool (Right Column) -->
@@ -934,7 +905,7 @@
 </div>
 </div>
 </section>
-<!-- END: CalculatorAndShippingSection -->
+<!-- END: OrderingAndShippingSection -->
 <!-- BEGIN: TestimonialsSection -->
 <section class="py-16 bg-slate-50 border-b border-slate-200" data-purpose="social-proof">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1207,55 +1178,6 @@
         }
       });
     });
-  </script>
-<script data-purpose="bulk-calculator">
-    // Volume pricing calculator: unit-price tiers per product.
-    const TIERS = {"button-badge-25-mm": [[1, 6.99], [10, 2.64], [25, 1.7], [50, 1.1], [100, 1.02], [250, 0.95], [500, 0.76], [1000, 0.66], [2500, 0.56], [5000, 0.49], [10000, 0.36]], "button-badge-35-mm": [[1, 7.99], [10, 3.33], [25, 2.15], [50, 1.39], [100, 1.29], [250, 1.2], [500, 0.97], [1000, 0.83], [2500, 0.71], [5000, 0.61], [10000, 0.45]], "button-badge-57-mm": [[1, 8.99], [10, 3.89], [25, 2.51], [50, 1.62], [100, 1.51], [250, 1.4], [500, 1.13], [1000, 0.97], [2500, 0.83], [5000, 0.72], [10000, 0.53]], "button-badge-85-mm": [[1, 10.49], [10, 5.86], [25, 2.99], [50, 1.93], [100, 1.79], [250, 1.67], [500, 1.34], [1000, 1.15], [2500, 0.99], [5000, 0.85], [10000, 0.63]], "fridge-badge-magnet-35-mm": [[1, 7.99], [10, 3.46], [25, 2.38], [50, 1.69], [100, 1.6], [250, 1.52], [500, 1.3], [1000, 1.18], [2500, 1.07], [5000, 0.98], [10000, 0.84]], "fridge-badge-magnet-57-mm": [[1, 9.49], [10, 4.31], [25, 2.93], [50, 2.45], [100, 1.93], [250, 1.82], [500, 1.55], [1000, 1.39], [2500, 1.26], [5000, 1.14], [10000, 0.95]], "fridge-badge-magnet-85-mm": [[1, 10.99], [10, 5.06], [25, 3.41], [50, 2.35], [100, 2.22], [250, 2.09], [500, 1.77], [1000, 1.58], [2500, 1.42], [5000, 1.28], [10000, 1.06]]};
-    const slider = document.getElementById('bulk-slider');
-    const qtyVal = document.getElementById('badge-qty-val');
-    const unitPriceEl = document.getElementById('calculated-unit-price');
-    const savingsEl = document.getElementById('calculated-savings');
-    const totalPriceEl = document.getElementById('calculated-total-price');
-    const productEl = document.getElementById('bulk-product');
-    const grid = document.getElementById('tier-grid');
-    const money = (n) => '$' + n.toFixed(2);
-    const fmt = (n) => n.toLocaleString('en-AU');
-
-    function renderTiers() {
-      const t = TIERS[productEl.value];
-      grid.innerHTML = t.map((row, i) => {
-        const next = t[i + 1];
-        const label = next ? fmt(row[0]) + ' - ' + fmt(next[0] - 1) + ' Units' : fmt(row[0]) + '+ Units';
-        return '<div class="tier-tile p-2.5 rounded-lg border text-center text-xs bg-white border-slate-200" data-min="' + row[0] + '">' +
-               '<span class="block text-slate-500 font-medium">' + label + '</span>' +
-               '<span class="font-extrabold text-slate-900 text-sm">' + money(row[1]) + '</span></div>';
-      }).join('');
-    }
-
-    function calculateBulk(qty) {
-      const t = TIERS[productEl.value];
-      const base = t[0][1];
-      let unit = base;
-      t.forEach((row) => { if (qty >= row[0]) unit = row[1]; });
-      const total = qty * unit;
-      qtyVal.textContent = fmt(qty);
-      unitPriceEl.textContent = money(unit);
-      savingsEl.textContent = 'Total Savings: ' + money(qty * base - total);
-      totalPriceEl.textContent = money(total);
-      let active = null;
-      grid.querySelectorAll('.tier-tile').forEach((el) => {
-        el.classList.remove('active');
-        if (qty >= parseInt(el.dataset.min, 10)) active = el;
-      });
-      if (active) active.classList.add('active');
-    }
-
-    if (slider && grid) {
-      renderTiers();
-      slider.addEventListener('input', () => calculateBulk(parseInt(slider.value, 10)));
-      productEl.addEventListener('change', () => { renderTiers(); calculateBulk(parseInt(slider.value, 10)); });
-      calculateBulk(parseInt(slider.value, 10));
-    }
   </script>
 <!-- END: InteractiveScripts -->
 
