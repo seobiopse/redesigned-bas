@@ -22,6 +22,6 @@ Static HTML redesign of badgestore.com.au, published at https://seobiopse.github
 - Express lapel pin minimum order (source says 1 in one place and 25 in another; pages use 25 and 33 working days).
 - `sitemap.html` still has stale entries for other products (machine prices etc.).
 - Product filenames that do not match their product (e.g. `solid-brass-bone-pet-tag.html`) kept to avoid breaking URLs.
-- Push status: commits are local until the user asks to push.
+- Pushing: the user pushes manually with GitHub Desktop. Commit locally; do not ask to push or try to push.
 
 _Last updated: 2026-11-06._
