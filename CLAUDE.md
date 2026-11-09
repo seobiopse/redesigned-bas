@@ -6,6 +6,7 @@ Static HTML redesign of badgestore.com.au, published at https://seobiopse.github
 - **Facts come from the live site only.** Sizes, materials, dimensions and durability claims must match badgestore.com.au (or the staging site badgestore.badge-a-minit.com.au for new products). No invented specs. See `SPEC_CROSSCHECK_REPORT.md`.
 - **Product page layout reference:** `products/aluminium-channel-desk-plate.html` (preview card, step-by-step form, "Specifications & Bulk Guide", callout cards, FAQ). New products reuse this layout.
 - **FAQ answer style:** the answer opens with the question's own wording as a full sentence, names the product and "at BadgeStore"; add "For Dev" hover tips (info icon) on price, minimum order and lead-time figures.
+- **SEO rules for new pages:** title tag 60 characters or fewer and meta description 160 or fewer (all titles and descriptions unique), one H1, alt text on every image, canonical URL, Product/ItemList + BreadcrumbList + FAQPage schema. Reword source text (Badge-A-Minit) in our own words to avoid duplicate content across the two sites. No keyword research has been done yet.
 - **Quote-only products** (lapel pins) show "Priced per job", no invented prices, a mailto quote form, and no price schema. Priced products use AggregateOffer with a list of Offers.
 - **Category heading text:** "Australia's Leading Commercial Identification Supplier" (Tom, 5 Nov 2026) on all category pages.
 - **Lapel pins:** 18 styles from badge-a-minit.com.au; generic `products/lapel-pin.html` is kept unlinked (removed from the category on request).
