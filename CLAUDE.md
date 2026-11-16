@@ -30,8 +30,9 @@ Static HTML redesign of badgestore.com.au, published at https://seobiopse.github
 - Product filenames that do not match their product (e.g. `solid-brass-bone-pet-tag.html`) kept to avoid breaking URLs.
 - Pushing: the user pushes manually with GitHub Desktop. Commit locally; do not ask to push or try to push.
 
-_Last updated: 2026-11-06._
+_Last updated: 2026-11-16._
 
-## Feedback round 16 Nov 2026 (Tom's team meeting)
-- Done: free shipping text removed (postage page + category copy); "100% Australian Made" pill removed from lanyards, changed on badge machines ("Australian Made & Imported Machines"), imported machines ("Imported Machines") and components ("Australian Owned"); name badge categories show "1-2 Day Fast Dispatch"; framed name badge trim "Rose Gold"; smooth scroll CSS on all pages.
-- Still open (needs content/owner): product images for domino/steel (Anish), "From" prefix on discounted bulk prices, remove price repeated in descriptions, desk plate mounting-hole note, laser engraving vs full colour wording, FAQ spelling pass (Fatima), Adelaide expert text on name badge pages. Backend items (discount modal, add-ons, PayPal sandbox, geo-block page, API user sync) belong to the BigCommerce/dev team, not this repo.
+## Feedback round 16 Nov 2026 (Tom's team meeting; commits ec32f26, 16eb954)
+- Done: free shipping text removed; "100% Australian Made" pill removed on lanyards, reworded on badge machines ("Australian Made & Imported Machines"), imported machines ("Imported Machines") and components ("Australian Owned"); name badge categories say "1-2 Day Fast Dispatch" (Tom's figure, not verified on live site); framed badge trim "Rose Gold"; smooth-scroll CSS on all pages; "From" prefix on range-priced button badge/fridge magnet pages and lanyard (From $2.45 = 30% off top tier); repeated prices removed from hero description paragraphs, price-only chips and meta/og/twitter descriptions (FAQ answers and spec tables keep prices for the "For Dev" tips); generic "Backing Fasteners" card removed from 17 categories (shipping card widened), metal plaques has a "Mounting Options" card; expert text reads "our expert team based in Adelaide" (button badge/machine pages keep own wording, per Tom).
+- Still open: corrected product images for domino/steel (Anish); laser engraving vs full colour wording; FAQ spelling/grammar pass (Fatima); backend items for the dev team (discount "apply to all" modal, add-ons not showing, PayPal sandbox credentials, country-block page with contact email, API user sync). Meet transcript was junk; the Tab transcript was the useful one.
+- Tip: the deployed site lags local commits (user pushes via GitHub Desktop), so screenshots may show old layouts.
