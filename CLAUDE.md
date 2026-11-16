@@ -31,3 +31,7 @@ Static HTML redesign of badgestore.com.au, published at https://seobiopse.github
 - Pushing: the user pushes manually with GitHub Desktop. Commit locally; do not ask to push or try to push.
 
 _Last updated: 2026-11-06._
+
+## Feedback round 16 Nov 2026 (Tom's team meeting)
+- Done: free shipping text removed (postage page + category copy); "100% Australian Made" pill removed from lanyards, changed on badge machines ("Australian Made & Imported Machines"), imported machines ("Imported Machines") and components ("Australian Owned"); name badge categories show "1-2 Day Fast Dispatch"; framed name badge trim "Rose Gold"; smooth scroll CSS on all pages.
+- Still open (needs content/owner): product images for domino/steel (Anish), "From" prefix on discounted bulk prices, remove price repeated in descriptions, desk plate mounting-hole note, laser engraving vs full colour wording, FAQ spelling pass (Fatima), Adelaide expert text on name badge pages. Backend items (discount modal, add-ons, PayPal sandbox, geo-block page, API user sync) belong to the BigCommerce/dev team, not this repo.
