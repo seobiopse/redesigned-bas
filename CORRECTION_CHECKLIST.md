@@ -25,7 +25,7 @@ Legend: [x] done and checked, [ ] open, [~] done in part or needs a decision.
 - [x] Expert text reads "our expert team based in Adelaide" on 16 category pages (button badge and machine pages keep their own wording).
 - [x] Acrylic domed name badge: full colour and laser engraved both described (Tom confirmed laser engraving is available).
 - [ ] Laser engraving vs full colour wording on the other pages Tom reviewed (he asked for one of the two to be stated clearly). Owner: Fatima / Tom to say which pages.
-- [ ] FAQ spelling and grammar pass. Owner: Fatima. (Automated typo scan found nothing, but it only checks a short list.)
+- [x] Spelling pass done 16 Nov (dictionary scan of all pages): fixed "fastner", "lasering", truncated "fine detai...", "scanability", "Badge Store" on the acrylic dome category. Grammar and tone still need a human read (Fatima).
 - [ ] Missing or wrong product images (domino, steel, others). Owner: Anish. Girish to supply the missing ones.
 
 ## D. SEO and technical hygiene (automated)
