@@ -38,3 +38,4 @@ _Last updated: 2026-11-16._
 - Tip: the deployed site lags local commits (user pushes via GitHub Desktop), so screenshots may show old layouts.
 - Correction checklist: `CORRECTION_CHECKLIST.md` (all automated checks passed 16 Nov; scan script lived in scratch, re-create if needed).
 - Tom asked for one document with all site content (categories, subcategories, products, footer pages): built with python-docx from the HTML into `review-docs/BadgeStore_Website_Content.docx` (untracked, excluded via .git/info/exclude so it is not published). Rebuild after content changes.
+- The content document now has a full-page screenshot per page before its text (Playwright with system Chrome on a local http.server, 1280px wide, JPEG; about 22 MB). Rebuild screenshots and text together after content changes. Site-wide header ribbon still says "Australian Made & Owned" (also on lanyard pages): ask Tom.
