@@ -4,7 +4,7 @@ Static HTML redesign of badgestore.com.au, published at https://seobiopse.github
 
 ## Standing decisions
 - **Facts come from the live site only.** Sizes, materials, dimensions and durability claims must match badgestore.com.au (or the staging site badgestore.badge-a-minit.com.au for new products). No invented specs. See `SPEC_CROSSCHECK_REPORT.md`.
-- **Product page layout reference:** `products/aluminium-channel-desk-plate.html` (preview card, step-by-step form, "Specifications & Bulk Guide", callout cards, FAQ). New products reuse this layout.
+- **Product page layout reference:** `products/premium-aluminium-desk-name-plate-with-changeable-nameplate.html` (preview card, step-by-step form, "Specifications & Bulk Guide", callout cards, FAQ). New products reuse this layout.
 - **FAQ answer style:** the answer opens with the question's own wording as a full sentence, names the product and "at BadgeStore"; add "For Dev" hover tips (info icon) on price, minimum order and lead-time figures.
 - **This is Tom's project: always use Ahrefs** (the Ahrefs MCP tools) for keyword research and any SEO data. Do not use Semrush or other tools here unless the user says so. Target market: Australia.
 - **SEO rules for new pages:** title tag 60 characters or fewer and meta description 160 or fewer (all titles and descriptions unique), one H1, alt text on every image, canonical URL, Product/ItemList + BreadcrumbList + FAQPage schema. Reword source text (Badge-A-Minit) in our own words to avoid duplicate content across the two sites. Keyword research done with Ahrefs (AU, 9 Nov 2026): volumes are small and difficulty very low. Lapel: "enamel pins" 1,300, "lapel pins" 700, "custom pins" 400, "custom lapel pins" 300, "custom enamel pins" 200, "die struck/die cast lapel pins" 70 each, "hard/soft enamel pins" 50 each; style names like glitter/rainbow/ribbon/service are about 0. Kits: "badge making kit" 200, "badge making supplies" 70, "button badge components" 0. Chalkboard: "chalkboard name badges" 0; nearby "custom name badges" 450, "name badges australia" 400, "magnetic name badges" 350, "reusable name badges" 100, "staff name badges" 100. Titles were updated to use these terms (e.g. "Badge Making Supplies & Button Badge Kits", "Reusable Chalkboard Name Badges"). Re-check volumes before changing titles again.
@@ -26,7 +26,7 @@ Static HTML redesign of badgestore.com.au, published at https://seobiopse.github
 - Chalkboard: staging category page says "from $2.60" for the blank badge but its product table says $2.63 (pages use $2.63); the staging volume tiers (30-65% off) differ from the 5-30% name badge scheme in `DEV_NOTE_Pricing_and_Content_Update.md`; blank badge dispatch differs between staging (in stock, next day) and Badge-A-Minit (3-5 days).
 - Pages without the Name Badges/Button Badges nav dropdowns (contact-us, gift-certificates, postage-information, privacy-policy, reviews, sitemap, terms-and-conditions) do not show the new nav links.
 - `sitemap.html` still has stale entries for other products (machine prices etc.).
-- Product filenames that do not match their product (e.g. `solid-brass-bone-pet-tag.html`) kept to avoid breaking URLs.
+- Product filenames that do not match their product (e.g. `pet-tag-anodised-aluminium-bone-shape.html`) kept to avoid breaking URLs.
 - Pushing: the user pushes manually with GitHub Desktop. Commit locally; do not ask to push or try to push.
 
 _Last updated: 2026-11-16._
